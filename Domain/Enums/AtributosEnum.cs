@@ -11,6 +11,7 @@ namespace Domain.Enums
         Constituicao,
         Inteligencia,
         Sabedoria,
-        Carisma
+        Presenca,
+        Vontade
     }
 }
