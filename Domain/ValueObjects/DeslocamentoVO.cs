@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    internal class Deslocamento
+    internal class DeslocamentoVO
     {
         public int Terra { get; set; } = 0;
         public int Voo { get; set; } = 0;

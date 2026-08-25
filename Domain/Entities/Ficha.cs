@@ -8,51 +8,69 @@ namespace Domain.Entities
     class Ficha
     {
         public string NomePersonagem { get; set; } = string.Empty;
-        public int Nivel { get; set; }
-        public int Proficiencia { get; set; }
-        public Especies Especie { get; set; }
-        public Antecedentes Antecedentes { get; set; }
-        public AkumaNoMi AkumaNoMi { get; set; }
-        public Profissoes Profissoes { get; set; }
-        public Deslocamento Deslocamento { get; set; }
+        public NivelVO Nivel { get; set; }
+        
+        public ProficienciaVO Proficiencia { get; set; }
+        public EspeciesVO Especie { get; set; }
+        public AntecedentesVO Antecedentes { get; set; }
+        public AkumaNoMiVO AkumaNoMi { get; set; }
+        public ProfissoesVO Profissoes { get; set; }
+        public DeslocamentoVO Deslocamento { get; set; }
+        public HabilidadeBasicaVo HabilidadeBasicas { get; set; }
         public int Vida { get; set; }
-        public ClasseDeResistencia ClasseDeResistencia { get; set; }
-        public ClasseDeDificuldade ClasseDeDificuldade { get; set; }
+        public ClasseDeResistenciaVO ClasseDeResistencia { get; set; }
+        public ClasseDeDificuldadeVO ClasseDeDificuldade { get; set; }
 
         public int PontosDePoder { get; set; }
 
 
-        public Atributos Atributos { get; set; }
-        public Pericias Pericias { get; set; }
+        public AtributosVO Atributos { get; set; }
+        public PericiasVO Pericias { get; set; }
         
 
 
-        private Ficha()
+        private Ficha(int nivel, bool mesaComNiveisEpicos, AtributosVO atr)
         {
+            this.Nivel = ImplementarNivel(nivel, mesaComNiveisEpicos);
+            this.Proficiencia = ImplementarProficiencia(this.Nivel);
 
 
+            Atributos = CalcularAtributos(atr);
 
-            Atributos = CalcularAtributos();
             Pericias = CalcularPericias();
             CalcularVida();
             CalcularClasseDeDificuldade();
             CalcularClasseDeResistencia();
-
-
+            
 
         }
 
-        private Pericias CalcularPericias()
+        private NivelVO ImplementarNivel(int nivel, bool ehMesaComNiveisEpicos)
+        {
+            var nivelTotal = new NivelVO(nivel, ehMesaComNiveisEpicos);
+            return nivelTotal;
+        }
+
+        private ProficienciaVO ImplementarProficiencia(NivelVO nivel)
+        {
+            var proficiencia = new ProficienciaVO(nivel.Nivel);
+
+            return proficiencia;
+
+        }
+        private AtributosVO CalcularAtributos(AtributosVO atr)
+        {
+            var atributos = new AtributosVO(atr.Forca, atr.Destreza,atr.Constituicao,atr.Sabedoria, atr.Presenca, atr.Vontade);
+
+            return atributos;
+        }
+
+        private PericiasVO CalcularPericias()
         {
 
             return new Pericias();
         }
 
-        private Atributos CalcularAtributos()
-        {
-
-            return new Atributos();
-        }
 
         private int CalcularVida()
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class Variantes
+    public class VariantesVO
     {
         public VariantesEnum Variante { get; private set; }
         public string Descricao { get; private set; } = string.Empty;
@@ -13,7 +13,7 @@ namespace Domain.ValueObjects
        
 
 
-        public Variantes( VariantesEnum variante) {
+        public VariantesVO( VariantesEnum variante) {
             this.Variante = variante;
             DescricaoVariante();
         }

@@ -1,11 +1,8 @@
 ﻿using Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class EstiloDeCombate
+    public class EstiloDeCombateVO
     {
         public int DadosDeVida { get; private set; }
 
@@ -22,7 +19,7 @@ namespace Domain.ValueObjects
         public string ArmaFavorita { get; private set; } = string.Empty;
 
 
-        public EstiloDeCombate(List<PericiasEnum> pericias, EstilosEnum estilo , AtributosEnum atributoPrimario) 
+        public EstiloDeCombateVO(List<PericiasEnum> pericias, EstilosEnum estilo , AtributosEnum atributoPrimario) 
         {
             this.Estilo = estilo;
             this.PericiasSelecionadas = VerificarPericias(pericias);
@@ -232,7 +229,7 @@ namespace Domain.ValueObjects
                     }
                     break;
                 case EstilosEnum.Ciborgue:
-                    List<AtributosEnum> atributoPrimarioPermitidoCiborgue = new List<AtributosEnum>() { AtributosEnum.Sabedoria,AtributosEnum.Forca};
+                    List<AtributosEnum> atributoPrimarioPermitidoCiborgue = new List<AtributosEnum>() { AtributosEnum.Sabedoria,AtributosEnum.Forca };
 
                     if (!atributoPrimarioPermitidoCiborgue.Contains(atributoEscolhido))
                     {

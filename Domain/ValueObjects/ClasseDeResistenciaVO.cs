@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    internal class Salvaguarda
+    internal class ClasseDeResistenciaVO
     {
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    internal class AkumaNoMi
+    public class HabilidadeBasicaVo
     {
+
     }
 }

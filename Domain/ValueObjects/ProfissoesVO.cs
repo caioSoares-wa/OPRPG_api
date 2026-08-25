@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class ClasseDeDificuldade
+    internal class ProfissoesVO
     {
-
     }
 }
