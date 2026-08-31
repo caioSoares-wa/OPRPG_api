@@ -2,21 +2,24 @@
 
 namespace Domain.ValueObjects
 {
-    public class EstiloDeCombateVO
+    public record EstiloDeCombateVO
     {
-        public int DadosDeVida { get; private set; }
+        public int DadosDeVida { get; init; }
 
-        public EstilosEnum Estilo { get; private set; }
+        public EstilosEnum Estilo { get; init; }
 
-        public AtributosEnum AtributoPrimario { get; private set; }
+        public AtributosEnum AtributoPrimario { get; init; }
 
-        public List<AtributosEnum> Salvaguarda { get; private set; }
+        public List<AtributosEnum> Salvaguarda { get; init; }
 
-        public string ProficienciaEmArmas { get; private set; } = string.Empty;
+        public string ProficienciaEmArmas { get; init; } = string.Empty;
 
-        public List<PericiasEnum> PericiasSelecionadas { get; private set; } = new List<PericiasEnum>();
+        public List<PericiasEnum> PericiasSelecionadas { get; init; } = new List<PericiasEnum>();
 
-        public string ArmaFavorita { get; private set; } = string.Empty;
+        public string ArmaFavorita { get; init; } = string.Empty;
+        public int QuantidadeDeEscolhasPericias { get; init; }
+        
+
 
 
         public EstiloDeCombateVO(List<PericiasEnum> pericias, EstilosEnum estilo , AtributosEnum atributoPrimario) 

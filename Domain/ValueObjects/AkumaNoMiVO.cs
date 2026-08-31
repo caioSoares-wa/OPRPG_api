@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class AkumaNoMiVO
+    public record AkumaNoMiVO
     {
     }
 }

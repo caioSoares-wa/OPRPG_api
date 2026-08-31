@@ -3,7 +3,7 @@
 
 namespace Domain.ValueObjects
 {
-    public class EspeciesVO
+    public record EspeciesVO
     {
 
         

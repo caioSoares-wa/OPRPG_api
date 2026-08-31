@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class NivelVO
+    public record NivelVO
     {
 
-        public int Nivel { get; private set; } = 0;
-        public bool EhNiveisEpicos { get; private set; } = false;
+        public int Nivel { get; init; } = 0;
+        public bool EhNiveisEpicos { get; init; } = false;
 
         public NivelVO(int nivel, bool ehNiveisEpicos) {
             this.Nivel = VerificarNivel(nivel, ehNiveisEpicos);

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    internal class ClasseDeResistenciaVO
+    public record ClasseDeResistenciaVO
     {
     }
 }

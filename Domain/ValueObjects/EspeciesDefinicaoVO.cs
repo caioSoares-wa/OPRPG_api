@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class HabilidadeBasicaVo
+    public class EspeciesDefinicaoVO
     {
-
+        public int MyProperty { get; set; }
     }
 }

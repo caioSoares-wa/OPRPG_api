@@ -5,19 +5,19 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class PericiasVO
+    public record PericiasVO
     {
 
-        public PericiasEnum Nome { get; private set; }
-        public bool EhTreinado { get; private set; }
-        public int AtributoBase { get; private set; }
-        public int ValorTotal { get; private set; }
+        public PericiasEnum Nome { get; init; }
+        public bool EhTreinado { get; init; }
+        public int AtributoBase { get; init; }
+        public int ValorTotal { get; init; }
 
 
-        public PericiasVO(PericiasEnum nome,PericiasEnum pericia , bool ehTreinado , int atributoBase, int proficiencia)
+
+        public PericiasVO(PericiasEnum pericia , bool ehTreinado , int atributoBase, int proficiencia)
         {
             this.AtributoBase = atributoBase;
-            this.Nome = nome;
             this.EhTreinado = ehTreinado;
 
 
@@ -36,6 +36,7 @@ namespace Domain.ValueObjects
             }
 
             return total;
+
         }
     }
 }

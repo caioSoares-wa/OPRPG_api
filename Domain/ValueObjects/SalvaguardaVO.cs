@@ -5,19 +5,21 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class SalvaguardaVO 
+    public record SalvaguardaVO 
     {
 
         public ProficienciaVO ProficienciaVO { get; }  
         public AtributosVO AtributosVO { get; }
         public EstiloDeCombateVO estiloDeCombateVO { get; }
 
-        public int ForcaTot { get; private set; }
-        public int DestrezaTot { get; private set; }
-        public int ConstituicaoTot { get; private set; }
-        public int SabedoriaTot { get; private set; }
-        public int PresencaTot { get; private set; }
-        public int VontadeTot { get; private set; }
+        public int ForcaTot { get; init; }
+        public int DestrezaTot { get; init; }
+        public int ConstituicaoTot { get; init; }
+        public int SabedoriaTot { get; init; }
+        public int PresencaTot { get; init; }
+        public int VontadeTot { get; init; }
+
+        public List<AtributosEnum> SalvaguardasEscolhidas { get; private set; }
 
 
         private Dictionary<AtributosEnum, bool> ehProficiente = new Dictionary<AtributosEnum, bool>
@@ -30,19 +32,29 @@ namespace Domain.ValueObjects
             [AtributosEnum.Vontade] = false,
         };
 
-        public SalvaguardaVO (AtributosVO atributos, ProficienciaVO proficiencia, EstiloDeCombateVO estiloDeCombate)
+        public SalvaguardaVO (AtributosVO atributos, ProficienciaVO proficiencia, EstiloDeCombateVO estiloDeCombate, List<AtributosEnum> salvaguardasEscolhidas)
         {
             this.AtributosVO = atributos;
             this.ProficienciaVO = proficiencia;
             this.estiloDeCombateVO = estiloDeCombate;
-
+            this.SalvaguardasEscolhidas = salvaguardasEscolhidas;
             ImplementarBonusSalvaguarda();
             
            
         }
 
-        private void ImplementarBonusSalvaguarda()
-        {
+        private void ImplementarBonusSalvaguarda(){
+            foreach (var i in SalvaguardasEscolhidas)
+            {
+                if (!estiloDeCombateVO.Salvaguarda.Contains(i))
+                {
+                    throw new Exception($"Salvaguarda {i}, Não pode ser escolhida pelo estilo de combate {estiloDeCombateVO.Estilo}");
+
+
+                }
+                this.ehProficiente[i] = true;
+            }
+
             foreach (var item in ehProficiente )
             {
 
@@ -70,28 +82,35 @@ namespace Domain.ValueObjects
                             break;
                     }
                 }
-            }
-        }
-
-        public void MudarAtributo(Dictionary<AtributosEnum, bool> listaDeSalvaguardasEscolhidas)
-        {
-
-            var listaDeSalvaguardasPermitidas = estiloDeCombateVO.Salvaguarda;
-
-            foreach (var items in listaDeSalvaguardasEscolhidas)
-            {
-
-                if (!listaDeSalvaguardasPermitidas.Contains(items.Key))
+                else
                 {
-                    throw new Exception("Não é possivel selecionar essa salvaguarda");
+                    switch (item.Key)
+                    {
+                        case AtributosEnum.Forca:
+                            this.ForcaTot = AtributosVO.ForcaMod;
+                            break;
+                        case AtributosEnum.Destreza:
+                            this.DestrezaTot = AtributosVO.DestrezaMod;
+                            break;
+                        case AtributosEnum.Constituicao:
+                            this.ConstituicaoTot = AtributosVO.ConstituicaoMod;
+                            break;
+                        case AtributosEnum.Sabedoria:
+                            this.SabedoriaTot = AtributosVO.SabedoriaMod;
+                            break;
+                        case AtributosEnum.Presenca:
+                            this.PresencaTot = AtributosVO.PresencaMod;
+                            break;
+                        case AtributosEnum.Vontade:
+                            this.VontadeTot = AtributosVO.VontadeMod;
+                            break;
+                    }
+
                 }
 
-                this.ehProficiente[items.Key] = true;
             }
-
-
-            ImplementarBonusSalvaguarda();
         }
+
 
 
 

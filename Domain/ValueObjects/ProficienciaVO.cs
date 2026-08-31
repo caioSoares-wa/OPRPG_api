@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class ProficienciaVO
+    public record ProficienciaVO
     {
 
         public ProficienciaVO(int nivel)
@@ -12,7 +12,7 @@ namespace Domain.ValueObjects
             this.Proficiencia = CalcularProficiencia(nivel);
         }
 
-        public int Proficiencia { get; private set; }
+        public int Proficiencia { get; init; }
 
 
         private int CalcularProficiencia (int nivel)

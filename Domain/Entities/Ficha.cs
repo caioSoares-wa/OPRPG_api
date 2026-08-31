@@ -1,4 +1,5 @@
-﻿using Domain.ValueObjects;
+﻿using Domain.Enums;
+using Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,8 +17,8 @@ namespace Domain.Entities
         public AkumaNoMiVO AkumaNoMi { get; set; }
         public ProfissoesVO Profissoes { get; set; }
         public DeslocamentoVO Deslocamento { get; set; }
-        public HabilidadeBasicaVo HabilidadeBasicas { get; set; }
         public int Vida { get; set; }
+        public EstiloDeCombateVO Estilo { get; set; }
         public ClasseDeResistenciaVO ClasseDeResistencia { get; set; }
         public ClasseDeDificuldadeVO ClasseDeDificuldade { get; set; }
 
@@ -29,11 +30,13 @@ namespace Domain.Entities
         
 
 
-        private Ficha(int nivel, bool mesaComNiveisEpicos, AtributosVO atr)
+        private Ficha(int nivel, bool mesaComNiveisEpicos, AtributosVO atr, EstiloDeCombateVO estilo)
         {
             this.Nivel = ImplementarNivel(nivel, mesaComNiveisEpicos);
             this.Proficiencia = ImplementarProficiencia(this.Nivel);
 
+
+            Estilo = ImplementarEstilo(estilo);
 
             Atributos = CalcularAtributos(atr);
 
@@ -43,6 +46,17 @@ namespace Domain.Entities
             CalcularClasseDeResistencia();
             
 
+        }
+
+        private EstiloDeCombateVO ImplementarEstilo(EstiloDeCombateVO estilo, List<PericiasEnum> periciasEscolhidas)
+        {
+            if (periciasEscolhidas.Count() >=3 || periciasEscolhidas )
+            {
+
+            }
+
+            var estiloFeito = new EstiloDeCombateVO();
+            return estiloFeito;
         }
 
         private NivelVO ImplementarNivel(int nivel, bool ehMesaComNiveisEpicos)
@@ -68,7 +82,7 @@ namespace Domain.Entities
         private PericiasVO CalcularPericias()
         {
 
-            return new Pericias();
+            return new PericiasVO();
         }
 
 

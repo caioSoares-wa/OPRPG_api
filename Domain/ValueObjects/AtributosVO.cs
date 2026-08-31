@@ -4,21 +4,21 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class AtributosVO
+    public record AtributosVO
     {
-        public int Forca { get; set; } 
-        public int Destreza { get; set; } 
-        public int Constituicao { get; set; }
-        public int Sabedoria { get; set; } 
-        public int Presenca { get; set; } 
-        public int Vontade { get; set; } 
+        public int Forca { get; init; } 
+        public int Destreza { get; init; } 
+        public int Constituicao { get; init; }
+        public int Sabedoria { get; init; } 
+        public int Presenca { get; init; } 
+        public int Vontade { get; init; } 
 
-        public int ForcaMod { get; set; }
-        public int DestrezaMod { get; set; }
-        public int ConstituicaoMod { get; set; }
-        public int SabedoriaMod { get; set; }
-        public int PresencaMod { get; set; }
-        public int VontadeMod { get; set; }
+        public int ForcaMod { get; init; }
+        public int DestrezaMod { get; init; }
+        public int ConstituicaoMod { get; init; }
+        public int SabedoriaMod { get; init; }
+        public int PresencaMod { get; init; }
+        public int VontadeMod { get; init; }
 
 
 

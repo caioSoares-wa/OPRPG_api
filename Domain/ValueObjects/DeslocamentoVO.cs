@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    internal class DeslocamentoVO
+    internal record DeslocamentoVO
     {
-        public int Terra { get; set; } = 0;
-        public int Voo { get; set; } = 0;
-        public int Nado { get; set; } = 0;
+        public int Terra { get; init; } = 0;
+        public int Voo { get; init; } = 0;
+        public int Nado { get; init; } = 0;
     }
 }

@@ -5,24 +5,16 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class VariantesVO
+    public record VariantesVO
     {
-        public VariantesEnum Variante { get; private set; }
-        public string Descricao { get; private set; } = string.Empty;
-        public string DescricaoBonus { get; private set; } = string.Empty;
+        public VariantesEnum Variante { get; init; }
+        public string Descricao { get; init; } = string.Empty;
+        public string DescricaoBonus { get; init; } = string.Empty;
        
 
 
         public VariantesVO( VariantesEnum variante) {
             this.Variante = variante;
-            DescricaoVariante();
-        }
-
-        public void DescricaoVariante()
-        {
-
-
-
             switch  (Variante) {
                 case VariantesEnum.Birkans:
                     this.Descricao = "Habitantes de Birka, ilha localizada ao sudeste de Skypiea. Suas asas são as mais distintas, pois suas penas apontam para baixo. Alguns membros possuem uma fisionomia única que lembra bodes. É uma civilização religiosa com foco em cerimônias de ritos";
@@ -89,10 +81,9 @@ namespace Domain.ValueObjects
 
 
         }
-
      
 
-       
+     
 
     }
 }
