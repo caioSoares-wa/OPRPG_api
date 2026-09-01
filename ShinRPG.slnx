@@ -2,7 +2,6 @@
   <Project Path="api/api.csproj" />
   <Project Path="Application/Application.csproj" />
   <Project Path="Domain/Domain.csproj" />
-  <Project Path="Infra/Infra.csproj" />
+  <Project Path="Infra/Infra.csproj" Id="fbe5af81-bd04-4fbd-b225-b243b14bc7c4" />
   <Project Path="Shared/Shared.csproj" />
-  <Project Path="shinRpg/shinRpg.csproj" />
 </Solution>

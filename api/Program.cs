@@ -1,3 +1,6 @@
+using Domain.Interfaces;
+using Infra.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,21 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+
+string caminhoArquivoAntecedentes = builder.Configuration["CaminhosArquivos:AntecedentesJson"];
+string caminhoArquivoEspecies = builder.Configuration["CaminhosArquivos:Especiesjson"];
+
+builder.Services.AddScoped<IAntecedentesRepository>(provider =>
+{
+    return new AntecedentesRepository(caminhoArquivoAntecedentes);
+});
+
+builder.Services.AddScoped<IEspeciesRepository>(provider =>
+{
+    return new EspecieRepository(caminhoArquivoEspecies);
+});
+
+
 
 var app = builder.Build();
 

@@ -1,0 +1,310 @@
+{
+  "antecedentes": [
+    {
+      "nome": "Amnésia",
+      "descricao": "Seu passado é um vazio. Você não se lembra de quem era, de onde veio ou do que fez. Embora sua mente esteja em branco, seu corpo e seus instintos ainda carregam ecos do que você foi.",
+      "periciasOpcoes": [
+        "Investigação",
+        "Intuição",
+        "Percepção",
+        "História"
+      ],
+      "atributoRecomendado": "Sabedoria",
+      "caracteristicaEspecial": {
+        "nome": "Ecos do Passado",
+        "descricao": "Uma vez por descanso longo, você pode pedir ao Narrador uma lembrança vaga, sensação instintiva ou conhecimento inesperado relacionado a uma situação atual, fazendo um Teste de Atributo de Vontade (Sorte) com CD definida pelo Narrador. Em caso de sucesso, você recebe uma informação útil, ainda que incompleta ou simbólica. Em uma falha, a lembrança é confusa ou enganosa."
+      }
+    },
+    {
+      "nome": "Artista",
+      "descricao": "Antes de se aventurar pelos perigos do mundo, você se aventurava em seus prazeres, entretendo pessoas com sua arte e se sustentando com isso.",
+      "periciasOpcoes": [
+        "Acrobacia",
+        "Atuação",
+        "História",
+        "Persuasão",
+        "Prestidigitação",
+        "Provocação"
+      ],
+      "atributoRecomendado": "Presença",
+      "caracteristicaEspecial": {
+        "nome": "Rock Star",
+        "descricao": "Dentro de centros urbanos, é possível se conectar com grupos de artistas para realizar apresentações. No início de cada dia, usando 2 horas do seu tempo, você pode rolar um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, para marcar um encontro noturno e se apresentar. Você deve ser bem-sucedido em um Teste de Atributo de Presença (Atuação) CD 15 para receber como cachê 3d10 x 100.000 bellys, ou 3d10 x 20.000 bellys em uma falha, mais 50.000 bellys para cada nível de personagem. O show só acaba no amanhecer do dia seguinte e você sofre os efeitos de um dia sem realizar um descanso longo. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Criminoso",
+      "descricao": "Você foi um fora da lei solitário ou associado a uma organização criminosa, cometendo crimes hediondos ou brandos para sobreviver, até abandonar essa vida para se lançar nos mares.",
+      "periciasOpcoes": [
+        "Enganação",
+        "Furtividade",
+        "Intimidação",
+        "Prestidigitação"
+      ],
+      "atributoRecomendado": "Destreza",
+      "caracteristicaEspecial": {
+        "nome": "Contatos",
+        "descricao": "Dentro de qualquer local frequentado por criminosos, pelo preço certo, você consegue arrumar contatos para as mais variadas necessidades (informações de difícil acesso, contratar pessoas com habilidades únicas, documentos falsos e outros serviços), desde que seja bem-sucedido em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Derrotado",
+      "descricao": "Em algum momento do passado, você esteve no auge — temido, respeitado ou admirado — até que uma derrota esmagadora mudou tudo, enfraquecendo você mas também moldando quem é agora.",
+      "periciasOpcoes": [
+        "Intuição",
+        "Investigação",
+        "História",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Vontade",
+      "caracteristicaEspecial": {
+        "nome": "Marcas da Derrota",
+        "descricao": "Ao falhar em um Teste de Atributo, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Em caso de sucesso, você aprende algo com a falha: recebe uma pista, uma informação parcial ou reduz as consequências narrativas negativas daquele erro. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Erudito",
+      "descricao": "Você dedicou grande parte da sua vida ao estudo formal, em bibliotecas, academias, mosteiros ou sob a tutela de um mestre.",
+      "periciasOpcoes": [
+        "História",
+        "Investigação",
+        "Natureza",
+        "Sobrenatural"
+      ],
+      "atributoRecomendado": "Sabedoria",
+      "caracteristicaEspecial": {
+        "nome": "Conhecimento Acumulado",
+        "descricao": "Ao se deparar com ruínas, textos antigos, símbolos, fenômenos incomuns ou eventos históricos, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Em caso de sucesso, o Narrador fornece uma informação útil, curiosidade relevante ou relembra um contexto esquecido sobre o assunto."
+      }
+    },
+    {
+      "nome": "Escravo",
+      "descricao": "Seu passado traz lembranças dolorosas: você foi destituído dos direitos mais básicos e forçado à servidão por um período de tempo, o que marcou cicatrizes físicas e psicológicas.",
+      "periciasOpcoes": [
+        "Atletismo",
+        "Intuição",
+        "Percepção",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Constituição",
+      "caracteristicaEspecial": {
+        "nome": "Esperança",
+        "descricao": "Devido ao seu passado difícil, quando deparado com qualquer situação desesperadora, você consegue se manter firme para buscar alguma solução, pedindo ao Narrador uma pista ou ajuda na resolução de qualquer dificuldade, desde que passe em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Exilado",
+      "descricao": "Você já ocupou uma posição de grande influência, mas ao apoiar o lado derrotado de um conflito ou ser vítima de conspiração, sua queda foi inevitável, sendo forçado a abandonar sua terra natal.",
+      "periciasOpcoes": [
+        "História",
+        "Intuição",
+        "Persuasão",
+        "Investigação"
+      ],
+      "atributoRecomendado": "Presença ou Sabedoria",
+      "caracteristicaEspecial": {
+        "nome": "Apoio no Exílio",
+        "descricao": "Você conta com o respaldo discreto de um reino que o considera um aliado valioso. Sempre que lidar com assuntos diplomáticos, negociações políticas ou contato com figuras de poder, você pode realizar um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Em caso de sucesso, esse reino pode facilitar audiências secretas, intermediar acordos políticos ou cessar conflitos menores, ou fornecer informações estratégicas ou apoio indireto por meio de aliados."
+      }
+    },
+    {
+      "nome": "Família D.",
+      "descricao": "Sua família possui um sobrenome secreto, do qual ninguém sabe a origem ou o significado, cercado de eventos tristes e do peso de que um deles trará uma grande tempestade ao mundo.",
+      "periciasOpcoes": [
+        "Haki",
+        "Intimidação",
+        "Intuição",
+        "Percepção"
+      ],
+      "atributoRecomendado": "Vontade",
+      "caracteristicaEspecial": {
+        "nome": "Vontade dos D.",
+        "descricao": "O Governo Mundial teme suas ações, fazendo com que sua recompensa aumente muito mais que o normal. Ao zarpar de uma ilha em gratidão com você, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador; ao ser bem-sucedido, até 3 habitantes podem querer fazer parte da sua tripulação. Caso o personagem morra, o novo personagem criado pode herdar sua vontade, mantendo características do antigo à escolha (Pontos de Vida do Estilo de Combate se mesmo dado de vida, Akuma no Mi, treinamentos, equipamentos, dinheiro e nível), sendo obrigatório escolher esse antecedente novamente."
+      }
+    },
+    {
+      "nome": "Marinheiro",
+      "descricao": "Durante o seu passado, você foi um membro ativo da Marinha, e seu tempo lá estará sempre marcado em suas memórias, seja qual for o motivo da sua saída.",
+      "periciasOpcoes": [
+        "Atletismo",
+        "Investigação",
+        "Medicina",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Força",
+      "caracteristicaEspecial": {
+        "nome": "Carteirada",
+        "descricao": "Ao interagir com marinheiros, mesmo em uma interação turbulenta, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, para usar sua antiga influência ou encontrar um antigo conhecido para fazer vista grossa sobre seus crimes ou captura. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Mercador",
+      "descricao": "Você cresceu negociando, comprando e vendendo, aprendendo cedo que informação vale tanto quanto dinheiro e que bons acordos abrem portas tão bem quanto força.",
+      "periciasOpcoes": [
+        "Enganação",
+        "Intuição",
+        "Investigação",
+        "Persuasão"
+      ],
+      "atributoRecomendado": "Presença",
+      "caracteristicaEspecial": {
+        "nome": "Bom Negócio",
+        "descricao": "Ao negociar compra, venda ou troca de bens e serviços, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Em caso de sucesso, você obtém uma vantagem comercial significativa, como desconto, bônus na troca, prioridade de entrega ou informação adicional relevante sobre o item ou mercado."
+      }
+    },
+    {
+      "nome": "Mercenário",
+      "descricao": "Você lutou por dinheiro, contratos ou favores, pouco importando a bandeira, aprendendo a sobreviver em meio a conflitos e alianças instáveis.",
+      "periciasOpcoes": [
+        "Atletismo",
+        "Intimidação",
+        "Investigação",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Força",
+      "caracteristicaEspecial": {
+        "nome": "Contrato Temporário",
+        "descricao": "Ao chegar a uma região, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, para encontrar alguém disposto a contratar você ou seu grupo para um serviço pontual (escolta, intimidação, proteção ou coleta de informações), com pagamento negociado na hora."
+      }
+    },
+    {
+      "nome": "Nobre",
+      "descricao": "Sua família foi ou ainda é regente de uma das tantas ilhas espalhadas pelo mundo, garantindo a você uma educação de primeira e alguma influência dentro dos círculos mais altos da sociedade.",
+      "periciasOpcoes": [
+        "História",
+        "Intuição",
+        "Investigação",
+        "Natureza",
+        "Sorte"
+      ],
+      "atributoRecomendado": "Sabedoria",
+      "caracteristicaEspecial": {
+        "nome": "Influência",
+        "descricao": "Ao interagir com outros nobres ou membros da alta sociedade, você pode usar sua influência para conseguir favores (entrada livre em áreas privadas, dinheiro emprestado, testemunhas ou audiências privadas com outros nobres), desde que passe em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Órfão",
+      "descricao": "Suas origens são desconhecidas; você nunca conheceu seus pais nem teve alguém que cuidasse de você, sempre tendo que se virar sozinho para se alimentar e sobreviver.",
+      "periciasOpcoes": [
+        "Atletismo",
+        "Furtividade",
+        "Intuição",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Força",
+      "caracteristicaEspecial": {
+        "nome": "Malandragem",
+        "descricao": "Dentro de centros urbanos, desde que seja bem-sucedido em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, você pode reconhecer padrões e caminhos secretos típicos, viajando entre quaisquer dois pontos da cidade duas vezes mais rápido que o seu deslocamento permite e de forma segura. O mesmo teste pode ser usado para encontrar comida e água para si e para até cinco outras pessoas, uma vez por dia, desde que seja possível."
+      }
+    },
+    {
+      "nome": "Pescador",
+      "descricao": "Durante anos de vida no mar, você conheceu portos, tripulações e histórias de toda parte, navegando por inúmeras rotas e ouvindo relatos de viajantes e mercadores.",
+      "periciasOpcoes": [
+        "Enganação",
+        "Intuição",
+        "Persuasão",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Presença",
+      "caracteristicaEspecial": {
+        "nome": "Histórias do Mar",
+        "descricao": "Sua reputação e lábia lhe rendem hospitalidade quase automática. Em um porto ou em contato com marinheiros e civis ligados ao mar, você pode realizar um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador; em caso de sucesso, consegue viagem gratuita em qualquer navio. Além disso, ao compartilhar suas histórias e causos marítimos, pode tentar distrair uma criatura que consiga ouvi-lo: a criatura deve realizar uma Salvaguarda de Sabedoria CD 17 ou fica distraída por até 30 minutos, mesmo em combate. Criaturas não podem ser afetadas novamente dentro de um intervalo de 24 horas."
+      }
+    },
+    {
+      "nome": "Político",
+      "descricao": "De alguma forma, a política fez parte da sua vida, exigindo muitos estudos políticos e entendimento dos apelos populares, e deixando com você todo o conhecimento de como funcionam os bastidores dos governos.",
+      "periciasOpcoes": [
+        "Atuação",
+        "Enganação",
+        "História",
+        "Intuição",
+        "Persuasão",
+        "Provocação"
+      ],
+      "atributoRecomendado": "Presença",
+      "caracteristicaEspecial": {
+        "nome": "Discurso",
+        "descricao": "Ao confrontar uma pessoa hostil fora de combate, desde que seja bem-sucedido em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, você pode convencê-la a te ajudar. A pessoa se aliará a você por até 24 horas, enquanto os objetivos dela não forem totalmente contrários aos seus. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    },
+    {
+      "nome": "Predestinado",
+      "descricao": "Desde que você se entende por gente, tudo conspira a seu favor: encontros improváveis, sobrevivência milagrosa, oportunidades únicas, como se o próprio mundo estivesse preparando seu caminho.",
+      "periciasOpcoes": [
+        "Intuição",
+        "Percepção",
+        "Persuasão",
+        "Sorte"
+      ],
+      "atributoRecomendado": "Vontade",
+      "caracteristicaEspecial": {
+        "nome": "Mão do Destino",
+        "descricao": "Uma vez por descanso longo, antes de tomar uma decisão importante, você pode pedir ao Narrador que revele a consequência futura mais provável da sua ação. Além disso, em momentos de extrema necessidade, uma reviravolta significativa pode ocorrer uma única vez durante toda a aventura, alterando drasticamente o curso dos acontecimentos (por exemplo: um Fruto comum revelar-se Mítico, ou descobrir um Haki do Rei excepcional). Gatilhos possíveis incluem a morte definitiva do personagem, uma derrota que encerraria a aventura, ou uma situação crítica sem saída plausível. Efeitos imediatos possíveis incluem recuperar Pontos de Vida e de Poder por completo, criar uma fuga de uma situação desesperadora, ou resolver um obstáculo aparentemente implacável. Resultados permanentes possíveis incluem a mudança definitiva da Akuma no Mi, a mudança permanente da espécie do personagem, ou acesso a novas características. Gatilhos, efeitos e resultados ficam sempre a critério do Narrador; uma vez ativada, não pode ser revertida, alterada ou reutilizada até o fim da aventura."
+      }
+    },
+    {
+      "nome": "Revolucionário",
+      "descricao": "Você foi um membro ativo do Exército Revolucionário, participando de guerras, golpes e revoluções e conquistando a reputação de um libertador, até abandonar essa missão.",
+      "periciasOpcoes": [
+        "Acrobacia",
+        "Atletismo",
+        "História",
+        "Medicina",
+        "Persuasão"
+      ],
+      "atributoRecomendado": "Destreza",
+      "caracteristicaEspecial": {
+        "nome": "Herói do Povo",
+        "descricao": "Devido ao seu passado turbulento, sua identidade pode ser facilmente percebida. Desde que seja bem-sucedido em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, você é capaz de encontrar um lugar para se esconder, descansar ou se recuperar entre pessoas que simpatizam com a causa revolucionária (a não ser que tenha se mostrado uma ameaça para eles). Eles o protegerão da lei ou de qualquer outra pessoa que o procure, embora não estejam dispostos a arriscar suas vidas por você."
+      }
+    },
+    {
+      "nome": "Sacerdote",
+      "descricao": "Você trabalhou em uma igreja, ajudando na educação, tratamento médico, alimentação e outros direitos básicos negados aos menos favorecidos, o que lhe garantiu uma visão mais humanista do mundo.",
+      "periciasOpcoes": [
+        "História",
+        "Medicina",
+        "Persuasão",
+        "Sobrenatural"
+      ],
+      "atributoRecomendado": "Sabedoria",
+      "caracteristicaEspecial": {
+        "nome": "Fiéis",
+        "descricao": "Ao adentrar em locais povoados, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Sendo bem-sucedido, você pode encontrar até 3 pessoas que já foram ajudadas por você. Eles são plebeus capazes de realizar qualquer tarefa mundana, mas não lutarão por você, não o seguirão em áreas evidentemente perigosas e o abandonarão se forem ameaçados ou abusados com frequência."
+      }
+    },
+    {
+      "nome": "Sobrevivente",
+      "descricao": "Durante o seu passado, um grande evento histórico ocorreu e você foi o único sobrevivente conhecido do desastre, e uma mítica se criou à sua volta, para o bem ou para o mal.",
+      "periciasOpcoes": [
+        "História",
+        "Intuição",
+        "Percepção",
+        "Sobrevivência"
+      ],
+      "atributoRecomendado": "Vontade",
+      "caracteristicaEspecial": {
+        "nome": "Reputação",
+        "descricao": "Quando estiver em qualquer povoado civilizado, você pode fazer um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador, para saber se os locais conhecem o seu passado. Ao ser bem-sucedido, você consegue sair impune a crimes menores, pois a maioria das pessoas terá medo ou pena de relatar sua atividade às autoridades."
+      }
+    },
+    {
+      "nome": "Tenryuubito",
+      "descricao": "Sua linhagem sanguínea vem dos Nobres Mundiais, mas por algum motivo você quis se aventurar de forma livre no mundo inferior, mesmo sabendo das consequências disso.",
+      "periciasOpcoes": [
+        "História",
+        "Intimidação",
+        "Investigação",
+        "Natureza"
+      ],
+      "atributoRecomendado": "Constituição",
+      "caracteristicaEspecial": {
+        "nome": "Costas Quentes",
+        "descricao": "Ao interagir com membros do Governo Mundial ou do alto escalão da Marinha, você pode tentar usar suas conexões com os Nobres Mundiais para publicar ou alterar notícias dos jornais, solicitar ataques contra tripulações inimigas, criar distrações e etc., desde que seja bem-sucedido em um Teste de Atributo de Vontade (Sorte), com CD definida pelo Narrador. Não pode ser usada novamente até o término de um descanso longo."
+      }
+    }
+  ]
+}
