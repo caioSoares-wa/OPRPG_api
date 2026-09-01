@@ -45,30 +45,9 @@ namespace Infra.Mappers
                     }).ToList()
 
                 },
-                TracoCultural = new EspeciesTracosCulturaisVO
-                {
-                    Descricao = dto.TracoCultural.Descricao
-                },
-                VarianteDaEspecie = new EspeciesVarianteDaEspecieVO
-                {
-                    Descricao = dto.VarianteDaEspecie.Descricao,
-                    Opcoes = dto.VarianteDaEspecie.Opcoes.Select(opcaoDTO => new EspeciesVarianteDaEspecieOpcoesVO
-                    {
-
-                        Nome = opcaoDTO.Nome,
-                        Beneficios = new EspeciesVarianteDaEspecieOpcoesBeneficiosVO
-                        {
-                            Nome = opcaoDTO.Beneficios.Nome,
-                            Descricao = opcaoDTO.Beneficios.Descricao,
-                        }
-                    }).ToList()
-
-
-                },
-                Ancestralidade = new EspeciesAncestralidadeVO
-                {
-                    Descricao = dto.Ancestralidade.Descricao,
-                },
+                TracoCultural = dto.TracoCultural?.ToDomain(),
+                VarianteDaEspecie = dto.VarianteDaEspecie?.ToDomain(),
+                Ancestralidade = dto.Ancestralidade?.ToDomain(),
                 RegrasEspeciais = dto.RegrasEspeciais.Select(regrasDTO => new EspeciesRegrasEspeciaisVO
                 {
                     Nome = regrasDTO.Nome,
@@ -82,11 +61,43 @@ namespace Infra.Mappers
 
 
 
+
             };
-
-
-
-            
         }
+
+        private static EspeciesTracosCulturaisVO ToDomain(this EspeciesTracosCulturaisDTO dto)
+        {
+            return new EspeciesTracosCulturaisVO { Descricao = dto.Descricao };
+
+        }
+       
+
+        private static EspeciesVarianteDaEspecieVO ToDomain(this EspeciesVarianteDaEspecieDTO dto){
+
+            return new EspeciesVarianteDaEspecieVO
+            {
+                Descricao = dto.Descricao,
+                Opcoes = dto.Opcoes.Select(opcaoDTO => new EspeciesVarianteDaEspecieOpcoesVO
+                {
+
+                    Nome = opcaoDTO.Nome,
+                    Beneficios = new EspeciesVarianteDaEspecieOpcoesBeneficiosVO
+                    {
+                        Nome = opcaoDTO.Beneficios.Nome,
+                        Descricao = opcaoDTO.Beneficios.Descricao,
+                    }
+                }).ToList()
+            };
+           
+
+        }
+
+
+        private static EspeciesAncestralidadeVO ToDomain(this EspeciesAncestralidadeDTO dto)
+        {
+
+            return new EspeciesAncestralidadeVO { Descricao = dto.Descricao };
+        }
+
     }
 }
