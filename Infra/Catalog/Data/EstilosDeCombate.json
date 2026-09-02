@@ -28,7 +28,6 @@
   },
   "estilosDeCombate": [
     {
-      "id": "Atirador",
       "nome": "Atirador",
       "dadoDeVida": "1d8",
       "pontosDeVidaNivel1": "8 + modificador de Constituição",
@@ -66,7 +65,6 @@
       "equipamentoInicial": "2 pistolas ou 1 mosquete com 80 unidades de munição esférica; e 5d10 x 1.000 Bellys."
     },
     {
-      "id": "Aventureiro",
       "nome": "Aventureiro",
       "dadoDeVida": "1d10",
       "pontosDeVidaNivel1": "10 + modificador de Constituição",
@@ -103,7 +101,6 @@
       "equipamentoInicial": "1 pistola com 80 unidades de munição esférica, 1 chicote, 1 adaga; e 10d10 x 1.000 Bellys."
     },
     {
-      "id": "Brutamontes",
       "nome": "Brutamontes",
       "dadoDeVida": "1d12",
       "pontosDeVidaNivel1": "12 + modificador de Constituição",
@@ -144,7 +141,6 @@
       "equipamentoInicial": "1 kanabo; e 6d10 x 1.000 Bellys."
     },
     {
-      "id": "CaratecaHomemPeixe",
       "nome": "Carateca Homem-Peixe",
       "dadoDeVida": "1d12",
       "pontosDeVidaNivel1": "12 + modificador de Constituição",
@@ -183,7 +179,6 @@
       "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
     },
     {
-      "id": "Ciborgue",
       "nome": "Ciborgue",
       "dadoDeVida": "1d12",
       "pontosDeVidaNivel1": "12 + modificador de Constituição",
@@ -224,7 +219,6 @@
       "equipamentoInicial": "20 unidades de combustível de máquinas; e 10d10 x 1.000 Bellys."
     },
     {
-      "id": "Espadachim",
       "nome": "Espadachim",
       "dadoDeVida": "1d10",
       "pontosDeVidaNivel1": "10 + modificador de Constituição",
@@ -261,7 +255,6 @@
       "equipamentoInicial": "2 sabres ou 2 katanas; e 5d10 x 1.000 Bellys."
     },
     {
-      "id": "Guerrilheiro",
       "nome": "Guerrilheiro",
       "dadoDeVida": "1d10",
       "pontosDeVidaNivel1": "10 + modificador de Constituição",
@@ -302,7 +295,6 @@
       "equipamentoInicial": "2 pistolas ou 1 mosquete com 80 unidades de munição esférica, ou 2 Armas Cortantes; e 5d10 x 1.000 Bellys."
     },
     {
-      "id": "Lutador",
       "nome": "Lutador",
       "dadoDeVida": "1d12",
       "pontosDeVidaNivel1": "12 + modificador de Constituição",
@@ -338,7 +330,6 @@
       "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
     },
     {
-      "id": "Ninja",
       "nome": "Ninja",
       "dadoDeVida": "1d8",
       "pontosDeVidaNivel1": "8 + modificador de Constituição",
@@ -386,7 +377,6 @@
       "equipamentoInicial": "1 katana, 5 kunais, 30 shurikens; e 6d10 x 1.000 Bellys."
     },
     {
-      "id": "OkamaKenpo",
       "nome": "Okama Kenpo",
       "dadoDeVida": "1d10",
       "pontosDeVidaNivel1": "10 + modificador de Constituição",
@@ -426,7 +416,6 @@
       "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
     },
     {
-      "id": "Rokushiki",
       "nome": "Rokushiki",
       "dadoDeVida": "1d10",
       "pontosDeVidaNivel1": "10 + modificador de Constituição",
@@ -469,7 +458,6 @@
       "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
     },
     {
-      "id": "Samurai",
       "nome": "Samurai",
       "dadoDeVida": "1d10",
       "pontosDeVidaNivel1": "10 + modificador de Constituição",

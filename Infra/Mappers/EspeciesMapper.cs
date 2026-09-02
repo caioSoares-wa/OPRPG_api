@@ -1,9 +1,9 @@
-﻿using Domain.ValueObjects;
-using Infra.DTOs.DTosEspecies;
+﻿using Infra.DTOs.DTosEspecies;
 using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Domain.ValueObjects.EspeciesVOs;
 
 namespace Infra.Mappers
 {

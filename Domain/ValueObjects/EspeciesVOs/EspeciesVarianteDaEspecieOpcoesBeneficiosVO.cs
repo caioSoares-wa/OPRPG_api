@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.ValueObjects
+namespace Domain.ValueObjects.EspeciesVOs
 {
     public class EspeciesVarianteDaEspecieOpcoesBeneficiosVO
     {

@@ -1,4 +1,4 @@
-﻿using Domain.ValueObjects;
+﻿using Domain.ValueObjects.EspeciesVOs;
 using System;
 using System.Collections.Generic;
 using System.Text;

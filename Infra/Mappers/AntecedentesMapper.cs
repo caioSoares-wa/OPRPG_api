@@ -1,4 +1,5 @@
 ﻿using Domain.ValueObjects;
+using Domain.ValueObjects.AntecedentesVO;
 using Infra.DTOs.DTOsAntecedentes;
 using System;
 using System.Collections.Generic;

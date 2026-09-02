@@ -1,5 +1,5 @@
 ﻿using Domain.Interfaces;
-using Domain.ValueObjects;
+using Domain.ValueObjects.AntecedentesVO;
 using Infra.DTOs.DTOsAntecedentes;
 using Infra.Mappers;
 using System;

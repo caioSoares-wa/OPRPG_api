@@ -20,10 +20,13 @@ builder.Services.AddScoped<IAntecedentesRepository>(provider =>
 
 builder.Services.AddScoped<IEspeciesRepository>(provider =>
 {
-    return new EspecieRepository(caminhoArquivoEspecies);
+    return new EspeciesRepository(caminhoArquivoEspecies);
 });
 
 
+
+builder.Services.AddScoped<IEspeciesRepository, EspeciesRepository>();
+builder.Services.AddScoped<IAntecedentesRepository, AntecedentesRepository>();
 
 var app = builder.Build();
 

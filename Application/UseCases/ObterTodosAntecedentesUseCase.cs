@@ -1,5 +1,5 @@
 ﻿using Domain.Interfaces;
-using Domain.ValueObjects;
+using Domain.ValueObjects.AntecedentesVO;
 using System;
 using System.Collections.Generic;
 using System.Text;
