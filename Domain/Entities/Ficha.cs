@@ -3,7 +3,6 @@ using Domain.ValueObjects.AntecedentesVO;
 using Domain.ValueObjects.AtributosVOs;
 using Domain.ValueObjects.EspeciesVOs;
 using Domain.ValueObjects.EstilosDeCombateVOs;
-using Domain.ValueObjects.NivelVOs;
 using Domain.ValueObjects.PericiasVOs;
 using Domain.ValueObjects.VidaVOs;
 using System;
@@ -23,7 +22,7 @@ namespace Domain.Entities
 
         public EspeciesVO Especies { get; private set; }
         public EstilosDeCombateVO Estilo { get; private set; }
-        public ProfissoesVO Profissoes { get; private set; }
+        //public ProfissoesVO Profissoes { get; private set; }
 
         public ConjuntoAtributosVO Atributos { get; private set; }
 
@@ -43,7 +42,7 @@ namespace Domain.Entities
             this.Atributos = Atributos;
 
 
-            periciasProficientes = VerificarPericias(Estilo,Especies,antecedentes,Profissoes) ;
+            //periciasProficientes = VerificarPericias(Estilo,Especies,antecedentes,Profissoes) ;
 
 
 
@@ -98,11 +97,6 @@ namespace Domain.Entities
 
 
 
-        private IEnumerable<PericiasEnum> VerificarPericias()
-        {
-
-
-
-        }
+        
     }
 }

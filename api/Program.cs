@@ -10,9 +10,10 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 
-string caminhoArquivoAntecedentes = builder.Configuration["CaminhosArquivos:AntecedentesJson"];
-string caminhoArquivoEspecies = builder.Configuration["CaminhosArquivos:Especiesjson"];
+string caminhoArquivoAntecedentes = builder.Configuration["CaminhoArquivos:Antecedentes"];
+string caminhoArquivoEspecies = builder.Configuration["CaminhoArquivos:Especies"];
 
+//Container De Dependency Injection
 builder.Services.AddScoped<IAntecedentesRepository>(provider =>
 {
     return new AntecedentesRepository(caminhoArquivoAntecedentes);
@@ -24,9 +25,6 @@ builder.Services.AddScoped<IEspeciesRepository>(provider =>
 });
 
 
-
-builder.Services.AddScoped<IEspeciesRepository, EspeciesRepository>();
-builder.Services.AddScoped<IAntecedentesRepository, AntecedentesRepository>();
 
 var app = builder.Build();
 

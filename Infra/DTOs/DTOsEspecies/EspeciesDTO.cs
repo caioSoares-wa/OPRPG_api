@@ -14,9 +14,9 @@ namespace Infra.DTOs.DTosEspecies
 
         public EspeciesTamanhoDTO Tamanho { get; init; }
         public EspeciesPesoDTO Peso { get; init; }
-        public int DeslocamentoMetros { get; init; }
-        public int NadoMetros { get; init; }
-        public EspeciesTracoDasEspeciesDTO TracosDasEspecies { get; init; }
+        public float DeslocamentoMetros { get; init; }
+        public float NadoMetros { get; init; }
+        public EspeciesTracosDaEspecieDTO TracosDaEspecie { get; init; }
         public EspeciesTracosCulturaisDTO TracoCultural { get; init; }
 
         public EspeciesVarianteDaEspecieDTO? VarianteDaEspecie { get; init; }

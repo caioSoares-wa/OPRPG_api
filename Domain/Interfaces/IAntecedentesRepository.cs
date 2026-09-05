@@ -7,6 +7,6 @@ namespace Domain.Interfaces
 {
     public interface IAntecedentesRepository
     {
-        Task<List<AntecedentesVO>> ObterTodosAsync();
+        Task<List<AntecedentesVO>> ObterTodosAntecedenteAsync();
     }
 }

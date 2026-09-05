@@ -7,11 +7,15 @@ using Domain.ValueObjects.EspeciesVOs;
 
 namespace Infra.Mappers
 {
+    //classe estatica, que não pode ser instanciada
     public static class EspeciesMapper
     {
+
+        //extension method: o "this EspeciesDTO dto " permite chamar dto.ToDomain() em vez de EspecieMapper.ToDomain(dto)
         public static EspeciesVO ToDomain(this EspeciesDTO dto)
         {
 
+            //tranforma os dados que o repositorio passou e transforma em um objeto do dominio (no caso especies)
             return new EspeciesVO
             {
                 Nome = dto.Nome,
@@ -29,15 +33,15 @@ namespace Infra.Mappers
                 },
                 DeslocamentoMetros = dto.DeslocamentoMetros,
                 NadoMetros = dto.NadoMetros,
-                TracosDasEspecies = new EspeciesTracoDasEspeciesVO
+                TracosDaEspecie = new EspeciesTracosDaEspecieVO
                 {
-                    Beneficios = dto.TracosDasEspecies.Beneficios.Select(beneficiosDTO => new EspeciesTracoDasEspeciesBeneficioVO
+                    Beneficios = dto.TracosDaEspecie.Beneficios.Select(beneficiosDTO => new EspeciesTracosDaEspecieBeneficioVO
                     {
                         Nome = beneficiosDTO.Nome,
                         Descricao = beneficiosDTO.Descricao,
                     }).ToList(),
 
-                    Dificuldades = dto.TracosDasEspecies.Dificuldades.Select(dificuldadesDTO => new EspeciesDificuldadesVO
+                    Dificuldades = dto.TracosDaEspecie.Dificuldades.Select(dificuldadesDTO => new EspeciesDificuldadesVO
                     {
                         Nome= dificuldadesDTO.Nome,
                         Descricao= dificuldadesDTO.Descricao,
@@ -65,13 +69,14 @@ namespace Infra.Mappers
             };
         }
 
+        //segundo metodo com o mesmo nome, so que é acionado quando alguem chama o .ToDomain() em um DTO da EspecieTracosCulturaisDTO
         private static EspeciesTracosCulturaisVO ToDomain(this EspeciesTracosCulturaisDTO dto)
         {
             return new EspeciesTracosCulturaisVO { Descricao = dto.Descricao };
 
         }
-       
 
+        //terceiro metodo com o mesmo nome, so que é acionado quando alguem chama o .ToDomain() em um DTO da EspeciesVarianteDaEspecieDTO
         private static EspeciesVarianteDaEspecieVO ToDomain(this EspeciesVarianteDaEspecieDTO dto){
 
             return new EspeciesVarianteDaEspecieVO
@@ -81,10 +86,10 @@ namespace Infra.Mappers
                 {
 
                     Nome = opcaoDTO.Nome,
-                    Beneficios = new EspeciesVarianteDaEspecieOpcoesBeneficiosVO
+                    Beneficio = new EspeciesVarianteDaEspecieOpcoesBeneficiosVO
                     {
-                        Nome = opcaoDTO.Beneficios.Nome,
-                        Descricao = opcaoDTO.Beneficios.Descricao,
+                        Nome = opcaoDTO.Beneficio.Nome,
+                        Descricao = opcaoDTO.Beneficio.Descricao,
                     }
                 }).ToList()
             };

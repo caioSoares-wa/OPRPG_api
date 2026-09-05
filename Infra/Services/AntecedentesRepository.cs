@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 
 namespace Infra.Services
@@ -27,7 +28,7 @@ namespace Infra.Services
 
         //metodo responsavel por buscar todos os antecedentes 
         // quanto terminar retorna uma List<AntecedentesVO>
-        public async Task<List<AntecedentesVO>> ObterTodosAsync()
+        public async Task<List<AntecedentesVO>> ObterTodosAntecedenteAsync()
         {
             //le todo o conteudo de forma assincrona 
             string jsonString = await File.ReadAllTextAsync(_Antecedentes);
@@ -39,8 +40,11 @@ namespace Infra.Services
                 PropertyNameCaseInsensitive = true,
             };
 
+
+            
             //Converte JSON para um objeto
             var containerDTO = JsonSerializer.Deserialize<AntecedentesContainerDTO>(jsonString, options);
+
 
 
             //verifica se o container é nulo, se sim volta uma lista vazia para não quebrar o sistema

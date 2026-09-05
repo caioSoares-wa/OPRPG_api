@@ -1,4 +1,5 @@
-﻿using Domain.ValueObjects;
+﻿using Domain.Enums;
+using Domain.ValueObjects;
 using Domain.ValueObjects.AntecedentesVO;
 using Infra.DTOs.DTOsAntecedentes;
 using System;
@@ -18,7 +19,10 @@ namespace Infra.Mappers
                 Nome = dto.Nome,
                 Descricao = dto.Descricao,
                 AtributoRecomendado = dto.AtributoRecomendado,
-                PericiasOpcoes = dto.PericiasOpcoes,
+                PericiasOpcoes = dto.PericiasOpcoes
+                
+
+                ,
                 CaracteristicaEspecial = new CaracteristicasEspecialVO
                 {
                     Nome = dto.Nome,

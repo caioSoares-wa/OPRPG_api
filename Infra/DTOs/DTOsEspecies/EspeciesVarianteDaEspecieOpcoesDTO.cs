@@ -7,6 +7,6 @@ namespace Infra.DTOs.DTosEspecies
     public record EspeciesVarianteDaEspecieOpcoesDTO
     {
         public string Nome { get; init; } = string.Empty;
-        public EspeciesVarianteDaEspecieOpcoesBeneficiosDTO? Beneficios { get; init; }
+        public EspeciesVarianteDaEspecieOpcoesBeneficiosDTO? Beneficio { get; init; }
     }
 }

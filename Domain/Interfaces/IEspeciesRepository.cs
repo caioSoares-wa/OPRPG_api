@@ -7,6 +7,6 @@ namespace Domain.Interfaces
 {
     public interface IEspeciesRepository
     {
-        public Task<List<EspeciesVO>> ObterTodosAsync();
+        public Task<List<EspeciesVO>> ObterTodasEspeciesAsync();
     }
 }

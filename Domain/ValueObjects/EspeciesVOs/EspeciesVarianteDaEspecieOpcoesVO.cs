@@ -7,6 +7,6 @@ namespace Domain.ValueObjects.EspeciesVOs
     public record EspeciesVarianteDaEspecieOpcoesVO
     {
         public string Nome { get; init; } = string.Empty;
-        public EspeciesVarianteDaEspecieOpcoesBeneficiosVO? Beneficios { get; init; }
+        public EspeciesVarianteDaEspecieOpcoesBeneficiosVO? Beneficio { get; init; }
     }
 }

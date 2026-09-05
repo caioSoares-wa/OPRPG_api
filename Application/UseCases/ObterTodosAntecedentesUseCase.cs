@@ -21,7 +21,7 @@ namespace Application.UseCases
         public async Task<List<AntecedentesVO>> ExecutarAsync()
         {
             //pede ao repositorio os dados
-            List<AntecedentesVO> antecedentes = await _repository.ObterTodosAsync();
+            List<AntecedentesVO> antecedentes = await _repository.ObterTodosAntecedenteAsync();
 
             //ordernar por ordem alfabetica
             var antecedenteOrdenados = antecedentes.OrderBy(a => a.Nome).ToList();

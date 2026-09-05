@@ -25,7 +25,7 @@ namespace Domain.ValueObjects.PericiasVOs
             this.ModificadorAtributo = modificadorDoAtributo;
 
 
-            Total = CalcularTotal() ;
+          //  Total = CalcularTotal() ;
            
         }
 
@@ -47,12 +47,12 @@ namespace Domain.ValueObjects.PericiasVOs
         }
 
 
-        private int CalcularTotal(int bonusProficiencia)
-        {
+       // private int CalcularTotal(int bonusProficiencia)
+        //{
 
 
-            return ModificadorAtributo + proficiencia + outros;
-        }
+         //   return ModificadorAtributo + proficiencia + outros;
+        //}
 
 
     }

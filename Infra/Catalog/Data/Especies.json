@@ -355,56 +355,6 @@
       "regrasEspeciais": []
     },
     {
-      "nome": "Mestiços",
-      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
-      "preconceito": "De acordo com o maior nível entre as duas espécies.",
-      "pontosDeVidaBase": "Média das duas Espécies (arredondado para baixo).",
-      "tamanho": {
-        "categoria": null,
-        "faixa": "Média dos menores valores das duas Espécies (arredondado para baixo)."
-      },
-      "peso": {
-        "faixa": "Média dos maiores valores das duas Espécies (arredondado para baixo)."
-      },
-      "deslocamentoMetros": "Maior deslocamento entre as duas Espécies.",
-      "nadoMetros": "Maior deslocamento entre as duas Espécies.",
-      "tracosDaEspecie": {
-        "beneficios": [
-          {
-            "nome": "Dois Mundos",
-            "descricao": "De acordo com as Espécies às quais o seu personagem pertença, você pode escolher receber uma dentre as características “Ancestralidade” ou “Traço Cultural”. Caso as duas Espécies de origem tenham a mesma característica, você não pode escolher uma diferente, mantendo a mesma das Espécies de origem."
-          },
-          {
-            "nome": "Miscigenação",
-            "descricao": "Você escolhe 1 Benefício da Espécie de cada uma das 2 Espécies a que o seu personagem pertença. Os benefícios das Variantes da Espécie também contam como a escolha dessa característica."
-          }
-        ],
-        "dificuldades": [
-          {
-            "nome": null,
-            "descricao": "Você escolhe 1 Dificuldade da Espécie entre as 2 Espécies a que o seu personagem pertença."
-          }
-        ]
-      },
-      "tracoCultural": {
-        "descricao": "Você recebe Pontos de Treinamento em um valor igual ao seu modificador de Sabedoria (mínimo de 1 ponto). Esses pontos devem ser convertidos de imediato em treinamentos, logo na criação do personagem. Posteriormente, ao aumentar o modificador de Sabedoria, você recebe mais Pontos de Treinamento, que podem ser consumidos quando você quiser. Em caso de modificador negativo, você não se beneficia dessa característica, até que aumente o seu modificador de Sabedoria para um número positivo."
-      },
-      "varianteDaEspecie": null,
-      "ancestralidade": {
-        "descricao": "De acordo com o tipo de mamífero peludo ou criatura do mar que o personagem tem como ancestral, ele recebe características únicas da espécie de que se assemelha. Essas características podem ser escolhidas dentre os Traços Comuns e Traços Específicos das Akuma no Mi Zoan (ignorando o requisito de forma original, híbrida ou animal), ou criadas pelo jogador, mas devem ser aprovadas pelo Narrador. O jogador deve escolher até 2 Traços Comuns e até 1 Traço Específico, coerentes com as características do tipo de animal escolhido. Alternativamente, caso o tipo de animal escolhido seja um carnívoro caçador, o jogador pode escolher não receber nenhum Traço Comum e Específico e receber o Traço Especial “Predador” no lugar."
-      },
-      "regrasEspeciais": [
-        {
-          "nome": "Mestiços entre Variantes da Mesma Espécie",
-          "descricao": "Caso o personagem seja um mestiço entre variantes da mesma espécie, ele deve escolher apenas os Benefícios de cada variante, não recebendo o Benefício da Espécie geral. Por exemplo, um filho entre membros da tribo dos braços longos com a tribo das pernas longas receberia as características “Braços Especiais” e “Pernas Especiais”."
-        },
-        {
-          "nome": "Treinamentos de Espécie dos Mestiços",
-          "descricao": "Mestiços que não possuírem espécies com a mesma lista de Treinamentos de Espécie podem aprender apenas 1 treinamento de cada uma das listas disponíveis. Por exemplo, um mestiço de Lunariano com Mink deve escolher apenas 1 treinamento presente nos treinamentos de Mink e mais 1 presente nos treinamentos de Lunariano."
-        }
-      ]
-    },
-    {
       "nome": "Minks",
       "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
       "preconceito": "Medíocre",

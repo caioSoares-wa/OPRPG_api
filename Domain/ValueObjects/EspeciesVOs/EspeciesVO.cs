@@ -13,9 +13,9 @@ namespace Domain.ValueObjects.EspeciesVOs
 
         public EspeciesTamanhoVO Tamanho { get; init; } 
         public EspeciesPesoVO Peso { get; init; }
-        public int DeslocamentoMetros { get; init; }
-        public int NadoMetros { get; init; }
-        public EspeciesTracoDasEspeciesVO TracosDasEspecies { get; init; }
+        public float DeslocamentoMetros { get; init; }
+        public float NadoMetros { get; init; }
+        public EspeciesTracosDaEspecieVO TracosDaEspecie { get; init; }
         public EspeciesTracosCulturaisVO TracoCultural { get; init; }
 
         public EspeciesVarianteDaEspecieVO? VarianteDaEspecie { get; init; }

@@ -23,7 +23,7 @@ namespace Infra.Services
         }
 
         //Metodo que retorna todas as especies
-        public async Task<List<EspeciesVO>> ObterTodosAsync()
+        public async Task<List<EspeciesVO>> ObterTodasEspeciesAsync()
         {
 
             // vai no arquivo passado e le tudo de forma assincrona, depois coloca em uma string
@@ -34,6 +34,7 @@ namespace Infra.Services
             var options = new JsonSerializerOptions { 
                 PropertyNameCaseInsensitive = true,
             };
+
 
             //transforma o json em um objeto especiescontainerDTO 
             var containerDTO = JsonSerializer.Deserialize<EspeciesContainerDTO>(jsonString,options);
