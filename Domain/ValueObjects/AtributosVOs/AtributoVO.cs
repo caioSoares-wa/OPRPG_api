@@ -26,7 +26,7 @@ namespace Domain.ValueObjects.AtributosVOs
         }
 
 
-        public static int VerificarValor(int valor)
+        private static int VerificarValor(int valor)
         {
             if (valor <= 0)
             {

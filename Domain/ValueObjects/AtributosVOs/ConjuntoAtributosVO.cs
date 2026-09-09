@@ -10,13 +10,13 @@ namespace Domain.ValueObjects.AtributosVOs
         public List<AtributoVO> Atributos { get; init; }
 
 
-        public ConjuntoAtributosVO(int valorForca,int valorDestreza,int valorConstituicao,int valorSabedoria,int valorPresenca , int valorVontade) {
+        public ConjuntoAtributosVO( int valorForca, int valorDestreza, int valorConstituicao, int valorSabedoria, int valorPresenca, int valorVontade) {
 
             this.Atributos = ImplementarAtributos(valorForca, valorDestreza, valorConstituicao, valorSabedoria, valorPresenca, valorVontade);
         }
 
 
-        public List<AtributoVO> ImplementarAtributos(int valorForca, int valorDestreza, int valorConstituicao, int valorSabedoria, int valorPresenca, int valorVontade)
+        private List<AtributoVO> ImplementarAtributos(int valorForca, int valorDestreza, int valorConstituicao, int valorSabedoria, int valorPresenca, int valorVontade)
         {
 
             var atributos = new List<AtributoVO>()

@@ -5,7 +5,7 @@ namespace api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EspeciesController : Controller
+    public class EspeciesController : ControllerBase
     {
         private readonly IEspeciesRepository _especiesRepository;
 

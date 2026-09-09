@@ -1,4 +1,4 @@
-﻿using Domain.ValueObjects.AntecedentesVO;
+﻿using Domain.ValueObjects.AntecedentesVOs;
 using System;
 using System.Collections.Generic;
 using System.Text;

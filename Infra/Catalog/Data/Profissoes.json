@@ -56,7 +56,6 @@
   },
   "profissoes": [
     {
-      "id": "Adestrador",
       "nome": "Adestrador",
       "exemplosDeUso": "Intimidar uma fera; prestar primeiros socorros em um animal; identificar a causa de um comportamento estranho em criaturas.",
       "periciasElegiveis": [
@@ -71,7 +70,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 30 rações para animais, livros de veterinária, nutrição animal e de treinamento animal, chicote, apito, 1 kit médico e 3 kits de primeiros socorros."
     },
     {
-      "id": "Arqueologo",
       "nome": "Arqueólogo",
       "exemplosDeUso": "Decifrar ou transcrever uma língua antiga; lembrar informações sobre a cultura ou o local de uma civilização; identificar ou restaurar artefatos encontrados.",
       "periciasElegiveis": [
@@ -86,7 +84,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 lanterna, 1 corda, 1 tenda, livros de história, geografia e culturas antigas, 1 chicote, 1 porta mapas, 1 caderno e caneta e 1 kit de escalada."
     },
     {
-      "id": "Botanico",
       "nome": "Botânico",
       "exemplosDeUso": "Identificar espécies vegetais raras ou tóxicas; descobrir propriedades medicinais ou venenosas de plantas; analisar ecossistemas para determinar se um ambiente é seguro ou hostil.",
       "periciasElegiveis": [
@@ -116,7 +113,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de comportamento e outros temas diversos, 3 kits de primeiros socorros, 2 cordas, 2 pares de algemas e 1 tipo de bússola à escolha (bússola ou log pose)."
     },
     {
-      "id": "Carpinteiro",
       "nome": "Carpinteiro",
       "exemplosDeUso": "Executar trabalhos manuais de marcenaria para criar ou reforçar objetos; replicar perfeitamente uma peça de madeira; compreender mecanismos simples ou complexos de engenharia.",
       "periciasElegiveis": [
@@ -131,7 +127,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de marcenaria, 10 plantas de construção, 1 serrote, 1 martelo, 1 kit de construção."
     },
     {
-      "id": "Cientista",
       "nome": "Cientista",
       "exemplosDeUso": "Compreender fenômenos naturais complexos; analisar substâncias desconhecidas; identificar padrões biológicos, físicos ou químicos; deduzir o funcionamento de tecnologias avançadas.",
       "periciasElegiveis": [
@@ -146,7 +141,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 kit médico, 1 kit de pesquisa, 1 kit de primeiros socorros, 1 kit de chaves, 1 kit de construções, livros científicos diversos, 1 mini computador."
     },
     {
-      "id": "Contrabandista",
       "nome": "Contrabandista",
       "exemplosDeUso": "Encontrar rotas alternativas ou passagens secretas; ocultar contrabando de inspeções oficiais; avaliar rapidamente o risco de uma negociação ilegal.",
       "periciasElegiveis": [
@@ -161,7 +155,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 capa ou casaco com bolsos falsos, 1 kit de falsificação, 1 registro codificado de contatos, 1 mapa de rotas clandestinas."
     },
     {
-      "id": "Cozinheiro",
       "nome": "Cozinheiro",
       "exemplosDeUso": "Encontrar alimentos em locais escassos (como cogumelos subterrâneos em cavernas); verificar se um alimento está estragado ou envenenado; identificar ingredientes apenas pelo aroma de uma preparação.",
       "periciasElegiveis": [
@@ -176,7 +169,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros gastronômicos, receitas e nutrição, 1 kit de cozinha, 3 kits de temperos, e 1 roupa de gala."
     },
     {
-      "id": "Engenheiro",
       "nome": "Engenheiro",
       "exemplosDeUso": "Realizar melhorias mecânicas em navios; interagir com sistemas de segurança avançados ou acessar informações em computadores; compreender estruturas complexas de engenharia.",
       "periciasElegiveis": [
@@ -191,7 +183,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de engenharia mecânica, física e computação, 1 martelo, 1 kit de chaves, 1 kit de construções e 1 mini computador."
     },
     {
-      "id": "Espiao",
       "nome": "Espião",
       "exemplosDeUso": "Perceber comportamentos suspeitos; vigiar alvos sem ser notado; interpretar padrões de movimentação ou logística; infiltrar-se em ambientes restritos sem levantar suspeitas.",
       "periciasElegiveis": [
@@ -206,7 +197,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 óculos com lente ampliadora, 1 aparelho de escuta, 1 caderno criptografado, 1 kit de disfarce, 1 kit para abrir cadeados, 1 kit de falsificação e 1 mini câmera."
     },
     {
-      "id": "Farmaceutico",
       "nome": "Farmacêutico",
       "exemplosDeUso": "Identificar substâncias químicas ou reagentes; criar compostos como analgésicos ou estimulantes; diferenciar toxinas naturais de artificiais.",
       "periciasElegiveis": [
@@ -221,7 +211,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 kit médico, 1 kit de pesquisa, 1 kit de primeiros socorros, 1 kit de herbalismo, 1 kit de venenos, livros de farmácia e biologia química e 1 conjunto de reagentes básicos."
     },
     {
-      "id": "Ferreiro",
       "nome": "Ferreiro",
       "exemplosDeUso": "Avaliar a integridade estrutural de uma arma; detectar defeitos em metais; estimar o ponto de fusão ou a resistência de ligas metálicas; reforçar equipamentos improvisados.",
       "periciasElegiveis": [
@@ -236,7 +225,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de metalurgia e armas, 1 martelo de forja pequeno, ferramentas de metal, 1 pedra de amolar, 1 bigorna pequena e 1 molde simples."
     },
     {
-      "id": "Informante",
       "nome": "Informante",
       "exemplosDeUso": "Recordar informações públicas, acontecimentos mundiais recentes ou aspectos culturais de diferentes locais; avaliar o valor real de mercadorias; buscar a localização de itens ou pessoas.",
       "periciasElegiveis": [
@@ -251,7 +239,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 caderno codificado, 1 mapa da cidade ou região de operação, ferramentas de comunicação discreta (sinalizadores, apitos, espelhos)."
     },
     {
-      "id": "Inventor",
       "nome": "Inventor",
       "exemplosDeUso": "Improvisar dispositivos com materiais limitados; entender de imediato o funcionamento de máquinas desconhecidas; realizar engenharia reversa em tecnologias distintas; adaptar tecnologias existentes para novos usos.",
       "periciasElegiveis": [
@@ -266,7 +253,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 kit de chaves, 1 kit de construção, livros de engenharia criativa e 1 caixa com peças diversas."
     },
     {
-      "id": "Jornalista",
       "nome": "Jornalista",
       "exemplosDeUso": "Investigar eventos recentes; extrair informações de testemunhas; analisar credibilidade de fontes; encontrar detalhes ocultos em narrativas contraditórias.",
       "periciasElegiveis": [
@@ -281,7 +267,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, 1 caderno de anotações, 1 máquina fotográfica portátil, 1 gravador de voz, 1 livro de Técnicas de entrevista."
     },
     {
-      "id": "Medico",
       "nome": "Médico",
       "exemplosDeUso": "Conduzir cirurgias, tratar ferimentos graves ou implantar próteses; diagnosticar doenças e prescrever os remédios adequados; criar antídotos ou medicamentos para enfermidades recém-descobertas.",
       "periciasElegiveis": [
@@ -296,7 +281,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de anatomia, medicina e bioquímica, 1 kit médico e 3 kits de primeiros socorros."
     },
     {
-      "id": "Musico",
       "nome": "Músico",
       "exemplosDeUso": "Impressionar multidões; conquistar interesses românticos; inspirar felicidade e motivação nos companheiros.",
       "periciasElegiveis": [
@@ -312,7 +296,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de canto, de instrumentos e partituras e 1 instrumento musical à escolha."
     },
     {
-      "id": "Navegador",
       "nome": "Navegador",
       "exemplosDeUso": "Calcular rotas marítimas; prever tempestades ou mudanças climáticas; criar mapas; orientar-se mesmo em meio a nevoeiros densos ou durante a noite sem instrumentos de navegação.",
       "periciasElegiveis": [
@@ -327,7 +310,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de astronomia, geografia e navegação, 1 tipo de bússola à escolha (bússola, log pose, log pose de 3 agulhas), 1 compasso, 1 balestilha e 1 astrolábio."
     },
     {
-      "id": "Psiquiatra",
       "nome": "Psiquiatra",
       "exemplosDeUso": "Interpretar comportamentos e emoções; diagnosticar transtornos psicológicos; estabilizar emocionalmente indivíduos em crise; identificar gatilhos traumáticos ou padrões mentais perigosos.",
       "periciasElegiveis": [
@@ -342,7 +324,6 @@
       "ferramentasEEquipamento": "1 mochila pequena, livros de psicologia, psiquiatria e comportamento humano, 1 caderno para anotações clínicas, 1 kit médico."
     },
     {
-      "id": "Timoneiro",
       "nome": "Timoneiro",
       "exemplosDeUso": "Conduzir veículos terrestres turbulentos; executar manobras de combate em alto-mar; estabilizar a embarcação após colisões; reagir rapidamente para evitar desastres naturais.",
       "periciasElegiveis": [

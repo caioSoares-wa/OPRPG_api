@@ -1,3 +1,4 @@
+using Application.UseCases;
 using Domain.Interfaces;
 using Infra.Services;
 
@@ -23,6 +24,11 @@ builder.Services.AddScoped<IEspeciesRepository>(provider =>
 {
     return new EspeciesRepository(caminhoArquivoEspecies);
 });
+
+
+builder.Services.AddScoped<IFichaRepository, FichaRepository>();
+builder.Services.AddScoped<FichaUseCase>();
+builder.Services.AddScoped<ObterTodasAsEspeciesUseCase>();
 
 
 

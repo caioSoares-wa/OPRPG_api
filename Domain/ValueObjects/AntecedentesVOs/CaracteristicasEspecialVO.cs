@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.ValueObjects.AntecedentesVO
+namespace Domain.ValueObjects.AntecedentesVOs
 {
     public record CaracteristicasEspecialVO
     {

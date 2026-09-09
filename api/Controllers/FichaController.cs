@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Domain.Interfaces;
-using Domain.ValueObjects.AtributosVOs;
+﻿using Application.DTOs;
+using Application.UseCases;
+using Microsoft.AspNetCore.Mvc;
+
+
+
 
 namespace api.Controllers
 {
@@ -9,18 +12,34 @@ namespace api.Controllers
     public class FichaController : ControllerBase
     {
 
-        private readonly IFichaRepository _fichaRepository;
-        public FichaController(IFichaRepository fichaRepository) {
-            _fichaRepository = fichaRepository;
+        private readonly FichaUseCase _fichaUseCase;
+        public FichaController(FichaUseCase fichaRepository) {
+            _fichaUseCase = fichaRepository;
+        }
+
+
+        [HttpPost]
+        [Route("criar-atributos")]
+        public IActionResult CriarFichaAtributos([FromBody] CriarAtributosDTO atributos)
+        {
+            var atributosValidados = _fichaUseCase.CriarAtributos(atributos.ValorForca,atributos.ValorDestreza,atributos.ValorConstituicao,atributos.ValorSabedoria,atributos.ValorPresenca,atributos.ValorVontade);
+
+            if (atributosValidados == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(atributosValidados);
         }
 
         [HttpPost]
-        [Route("api/criar-atributos")]
-        public IActionResult CriarFichaAtributos([FromBody] ConjuntoAtributosVO)
+        [Route("escolher-estilo")]
+        public IActionResult EscolherEstilo()
         {
 
 
-            return Ok();
+            return BadRequest();
         }
+
     }
 }

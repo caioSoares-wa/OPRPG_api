@@ -2,21 +2,17 @@
 using Domain.ValueObjects.AtributosVOs;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Domain.ValueObjects.PericiasVOs
 {
     public record ConjuntoPericiasVO
     {
+        public List<PericiasVO> Pericias { get; init; } = new();
+        public PericiasProficientesVO PericiasProficientes { get; init; }
 
-        
-
-        public List<PericiasVO> Pericias = new();
-
-
-        public ConjuntoPericiasVO(ConjuntoAtributosVO atributos, IEnumerable<PericiasEnum> periciasTreinadas) {
-
-            int modForca =  atributos.Atributos.Find(a => a.Nome == AtributosEnum.FORCA).Modificador;
+        public ConjuntoPericiasVO(ConjuntoAtributosVO atributos, List<PericiasEnum> periciasTreinadas)
+        {
+            int modForca = atributos.Atributos.Find(a => a.Nome == AtributosEnum.FORCA).Modificador;
             int modDestreza = atributos.Atributos.Find(a => a.Nome == AtributosEnum.DESTREZA).Modificador;
             int modSabedoria = atributos.Atributos.Find(a => a.Nome == AtributosEnum.SABEDORIA).Modificador;
             int modVontade = atributos.Atributos.Find(a => a.Nome == AtributosEnum.VONTADE).Modificador;
@@ -24,30 +20,26 @@ namespace Domain.ValueObjects.PericiasVOs
 
             Pericias = new List<PericiasVO>
             {
-                new PericiasVO("Atletismo", AtributosEnum.FORCA,modForca, null, false),
-                new PericiasVO("Acrobacia", AtributosEnum.DESTREZA,modDestreza, null, false),
-                new PericiasVO("Furtividade", AtributosEnum.DESTREZA,modDestreza, null, false),
-                new PericiasVO("Prestidigitação" ,AtributosEnum.DESTREZA,modDestreza, null, false),
-
-                new PericiasVO("História",AtributosEnum.SABEDORIA,modSabedoria, null, false),
-                new PericiasVO("Investigação", AtributosEnum.SABEDORIA,modSabedoria, null, false),
-                new PericiasVO("Medicina", AtributosEnum.SABEDORIA ,modSabedoria, null, false),
-                new PericiasVO("Natureza", AtributosEnum.SABEDORIA,modSabedoria, null, false),
-                new PericiasVO("Sobrevivência", AtributosEnum.SABEDORIA,modSabedoria, null, false),
-
-                new PericiasVO("Haki", AtributosEnum.VONTADE,modVontade, null, false),
-                new PericiasVO("Intuição", AtributosEnum.VONTADE,modVontade, null, false),
-                new PericiasVO("Percepção", AtributosEnum.VONTADE,modVontade, null, false),
-                new PericiasVO("Sobrenatural", AtributosEnum.VONTADE,modVontade, null, false),
-                new PericiasVO("Sorte", AtributosEnum.VONTADE,modVontade, null, false),
-
-                new PericiasVO("Atuação", AtributosEnum.PRESENCA,modPresenca, null, false),
-                new PericiasVO("Enganação", AtributosEnum.PRESENCA,modPresenca, null, false),
-                new PericiasVO("Intimidação", AtributosEnum.PRESENCA,modPresenca, null, false),
-                new PericiasVO("Persuasão", AtributosEnum.PRESENCA,modPresenca, null, false),
-                new PericiasVO("Provocação", AtributosEnum.PRESENCA,modPresenca, null, false),
+                new PericiasVO(PericiasEnum.ATLETISMO, AtributosEnum.FORCA, modForca, null, false),
+                new PericiasVO(PericiasEnum.ACROBACIA, AtributosEnum.DESTREZA, modDestreza, null, false),
+                new PericiasVO(PericiasEnum.FURTIVIDADE, AtributosEnum.DESTREZA, modDestreza, null, false),
+                new PericiasVO(PericiasEnum.PRESTIDIGITACAO, AtributosEnum.DESTREZA, modDestreza, null, false),
+                new PericiasVO(PericiasEnum.HISTORIA, AtributosEnum.SABEDORIA, modSabedoria, null, false),
+                new PericiasVO(PericiasEnum.INVESTIGACAO, AtributosEnum.SABEDORIA, modSabedoria, null, false),
+                new PericiasVO(PericiasEnum.MEDICINA, AtributosEnum.SABEDORIA, modSabedoria, null, false),
+                new PericiasVO(PericiasEnum.NATUREZA, AtributosEnum.SABEDORIA, modSabedoria, null, false),
+                new PericiasVO(PericiasEnum.SOBREVIVENCIA, AtributosEnum.SABEDORIA, modSabedoria, null, false),
+                new PericiasVO(PericiasEnum.HAKI, AtributosEnum.VONTADE, modVontade, null, false),
+                new PericiasVO(PericiasEnum.INTUICAO, AtributosEnum.VONTADE, modVontade, null, false),
+                new PericiasVO(PericiasEnum.PERCEPCAO, AtributosEnum.VONTADE, modVontade, null, false),
+                new PericiasVO(PericiasEnum.SOBRENATURAL, AtributosEnum.VONTADE, modVontade, null, false),
+                new PericiasVO(PericiasEnum.SORTE, AtributosEnum.VONTADE, modVontade, null, false),
+                new PericiasVO(PericiasEnum.ATUACAO, AtributosEnum.PRESENCA, modPresenca, null, false),
+                new PericiasVO(PericiasEnum.ENGANACAO, AtributosEnum.PRESENCA, modPresenca, null, false),
+                new PericiasVO(PericiasEnum.INTIMIDACAO, AtributosEnum.PRESENCA, modPresenca, null, false),
+                new PericiasVO(PericiasEnum.PERSUASAO, AtributosEnum.PRESENCA, modPresenca, null, false),
+                new PericiasVO(PericiasEnum.PROVOCACAO, AtributosEnum.PRESENCA, modPresenca, null, false),
             };
-
 
 
         }
