@@ -1,0 +1,525 @@
+{
+  "especies": [
+    {
+      "nome": "Anões",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Débil",
+      "pontosDeVidaBase": 8,
+      "tamanho": {
+        "categoria": "Miúdo",
+        "faixa": "Normalmente, entre 10 e 15 centímetros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 0,5 e 2 kg."
+      },
+      "deslocamentoMetros": 9,
+      "nadoMetros": 4.5,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Corpo Pequeno",
+            "descricao": "Enquanto o anão e seus mestiços permanecerem na categoria de tamanho Miúdo, eles se beneficiam das seguintes características: Estômago Pequeno: itens consumíveis e alimentos feitos para criaturas de tamanho Médio ou maior podem ser usados em metade da quantidade usual para garantir os mesmos bônus. Piscar: você pode desaparecer da visão de todos e reaparecer em um local desocupado à sua escolha, a até 9 metros de distância de sua posição inicial. Pode ser usada até 3 vezes, recuperando todos os usos ao término de um descanso longo. Andar das Fadas: desde que não estejam sob a condição “Impedido”, anões recebem vantagem em Testes de Destreza (Furtividade) quando não estiverem em um encontro de batalha. Dentro de um encontro, podem tentar se esconder mesmo a plena vista, usando uma ação bônus, desde que haja um local que proporcione cobertura total."
+          },
+          {
+            "nome": "Hóspede Feérico",
+            "descricao": "Enquanto o anão e seus mestiços mantiverem a categoria de tamanho Miúdo, podem ocupar o mesmo espaço de criaturas de categoria de tamanho maiores, se movimentando apenas através do corpo da criatura e sendo movidos junto com ela. Enquanto estiver compartilhando o espaço da criatura, não será possível ser alvejado por jogadas de ataque (comum ou Técnicas) ou Salvaguardas. Entretanto, não poderá usar ações poderosas e sofrerá metade de todo o dano direcionado à criatura que estiver compartilhando o espaço. O dano sofrido pelo anão ignora as características que alterem o dano sofrido pelo hospedeiro, como invulnerabilidades, resistências e etc."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Ingenuidade Anormal",
+            "descricao": "Anões são muito ingênuos e recebem -10 em Testes de Atributo de Vontade (Intuição)."
+          }
+        ]
+      },
+      "tracoCultural": {
+        "descricao": "Você recebe Pontos de Treinamento em um valor igual ao seu modificador de Sabedoria (mínimo de 1 ponto). Esses pontos devem ser convertidos de imediato em treinamentos, logo na criação do personagem. Posteriormente, ao aumentar o modificador de Sabedoria, você recebe mais Pontos de Treinamento, que podem ser consumidos quando você quiser. Em caso de modificador negativo, você não se beneficia dessa característica, até que aumente o seu modificador de Sabedoria para um número positivo."
+      },
+      "varianteDaEspecie": null,
+      "ancestralidade": null,
+      "regrasEspeciais": 
+        {
+          "nome": "Armas Reduzidas",
+          "descricao": "Os anões possuem grande conhecimento de manufatura, sendo capazes de fazer em tamanho reduzido, para seu próprio uso, qualquer arma (Cortantes, Especiais, Marciais e Munições) que já tenham visto o funcionamento, gastando 1/5 dos recursos normais da arma. No entanto, armas de fogo ou que realizem uma jogada de ataque (comum) à distância têm seu dano total reduzido pela metade, por conta do seu tamanho reduzido. As armas recebidas pelo Estilo de Combate já vêm adaptadas ao tamanho da sua espécie."
+        }
+      
+    },
+    {
+      "nome": "Celestiais",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Débil",
+      "pontosDeVidaBase": 10,
+      "tamanho": {
+        "categoria": "Médio",
+        "faixa": "Normalmente, entre 1,5 e 2,5 metros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 50 e 200 kg."
+      },
+      "deslocamentoMetros": 12,
+      "nadoMetros": 3,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Herança Cultural",
+            "descricao": "Um celestial conhece e se torna proficiente com todos os tipos de dials e suas funcionalidades. No início do jogo, à escolha do jogador, o personagem recebe 3 dials cotidianos de tipos diferentes e mais 1 dial bélico. Além disso, escolhe 2 Perícias para adicionar sua proficiência, à sua escolha, com exceção de “Sobrenatural” e “Sorte”. No lugar de uma dessas perícias, você pode escolher receber a Singularidade “Haki da Observação Inato” e receber 15 Pontos de Ambição, que só poderão ser investidos no Haki da Observação, logo após despertar o uso do Haki."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Anjos Caídos",
+            "descricao": "Por estarem, a gerações, acostumados com atmosferas menos densas, altitudes mais baixas podem distorcer o senso de equilíbrio dos celestiais. Você recebe -2 em Testes de Atributo de Destreza (Acrobacia), desde que não esteja a mais de 5.000 metros do nível do mar."
+          }
+        ]
+      },
+      "tracoCultural": {
+        "descricao": "Você recebe Pontos de Treinamento em um valor igual ao seu modificador de Sabedoria (mínimo de 1 ponto). Esses pontos devem ser convertidos de imediato em treinamentos, logo na criação do personagem. Posteriormente, ao aumentar o modificador de Sabedoria, você recebe mais Pontos de Treinamento, que podem ser consumidos quando você quiser. Em caso de modificador negativo, você não se beneficia dessa característica, até que aumente o seu modificador de Sabedoria para um número positivo."
+      },
+      "varianteDaEspecie": {
+        "descricao": "Você deve escolher uma das seguintes tribos para fazer parte:",
+        "opcoes": [
+          {
+            "nome": "Birkans",
+            "beneficio": {
+              "nome": "Sacerdote Celestial",
+              "descricao": "O celestial recebe +5 em Testes de Atributo de Presença (Atuação)."
+            }
+          },
+          {
+            "nome": "Shandians",
+            "beneficio": {
+              "nome": "Guerreiro Celestial",
+              "descricao": "O celestial recebe +5 em Testes de Atributo de Força (Atletismo)."
+            }
+          },
+          {
+            "nome": "Skypeans",
+            "beneficio": {
+              "nome": "Diplomata Celestial",
+              "descricao": "O celestial recebe +5 em Testes de Atributo de Presença (Persuasão)."
+            }
+          }
+        ]
+      },
+      "ancestralidade": null,
+      "regrasEspeciais": []
+    },
+    {
+      "nome": "Gigantes",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Inexistente",
+      "pontosDeVidaBase": 20,
+      "tamanho": {
+        "categoria": "Enorme",
+        "faixa": "Normalmente, entre 13 e 20 metros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 15 e 45 toneladas."
+      },
+      "deslocamentoMetros": 9,
+      "nadoMetros": 3,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Força Colossal",
+            "descricao": "O gigante se torna proficiente e dobra o Bônus de Proficiência em qualquer Salvaguarda ou Teste de Atributo de Força. Além disso, características e Técnicas que se limitam a afetar apenas criaturas Grandes ou menores podem afetar também criaturas e alvos Enormes."
+          },
+          {
+            "nome": "Corpo Assustador",
+            "descricao": "Os gigantes naturalmente impõem suas presenças àqueles ao seu redor. Recebem +2 em Testes de Atributo de Presença (Intimidação)."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Necessidades Gigantescas",
+            "descricao": "O corpo colossal dos gigantes gera a necessidade de recursos igualmente grandes. O gigante precisa de uma quantidade de alimento e líquido 5 vezes maior que a de um humano (o suficiente para mantê-lo alimentado, mas não para saciar sua fome de verdade) e ocupa o espaço de 20 tripulantes em um navio."
+          }
+        ]
+      },
+      "tracoCultural": {
+        "descricao": "Você recebe Pontos de Treinamento em um valor igual ao seu modificador de Sabedoria (mínimo de 1 ponto). Esses pontos devem ser convertidos de imediato em treinamentos, logo na criação do personagem. Posteriormente, ao aumentar o modificador de Sabedoria, você recebe mais Pontos de Treinamento, que podem ser consumidos quando você quiser. Em caso de modificador negativo, você não se beneficia dessa característica, até que aumente o seu modificador de Sabedoria para um número positivo."
+      },
+      "varianteDaEspecie": null,
+      "ancestralidade": null,
+      "regrasEspeciais": [
+        {
+          "nome": "Armas Gigantescas",
+          "descricao": "Por conta de suas proporções colossais, os gigantes utilizam armas incompatíveis com qualquer outra Espécie, se tornando impossível para um gigante usar uma arma que não seja própria para o seu tamanho, e vice-versa. É possível pedir que um ferreiro crie armas para um gigante; nesses casos, será cobrado 10 vezes o valor da arma, e o mesmo se aplica para roupas e acessórios. As armas recebidas pelo Estilo de Combate já são adaptadas ao tamanho da sua Espécie."
+        }
+      ]
+    },
+    {
+      "nome": "Humanos",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Inexistente",
+      "pontosDeVidaBase": 10,
+      "tamanho": {
+        "categoria": "Médio",
+        "faixa": "Normalmente, entre 1,5 e 4 metros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 65 e 600 kg."
+      },
+      "deslocamentoMetros": 9,
+      "nadoMetros": 4.5,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Adaptação",
+            "descricao": "O humano escolhe 3 Perícias para adicionar sua proficiência, à sua escolha, com exceção de “Haki”, “Sobrenatural” e “Sorte”."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Aspectos Humanos",
+            "descricao": "A humanidade é imensa e plural. Você deve escolher uma das seguintes falhas de caráter para o seu personagem:",
+            "opcoes": [
+              {
+                "nome": "Ganância",
+                "descricao": "Desde que você esteja na frente de um tesouro ou algum tesouro esteja relacionado a algum Teste de Atributo ou Salvaguarda, você recebe -2 no Teste."
+              },
+              {
+                "nome": "Gula",
+                "descricao": "É necessário o dobro de comida e água para você não sofrer as consequências de falta de alimentação."
+              },
+              {
+                "nome": "Inveja",
+                "descricao": "Quando uma ou mais criaturas são bem-sucedidas em um Teste de Atributo ou Salvaguarda que você falhou, durante a mesma rodada, você recebe -2 no seu próximo Teste de Atributo, até o final do dia."
+              },
+              {
+                "nome": "Ira",
+                "descricao": "Você falha automaticamente em qualquer Salvaguarda contra Provocação."
+              },
+              {
+                "nome": "Luxúria",
+                "descricao": "Criaturas do sexo que o seu personagem sinta atração recebem +2 em Testes Resistidos contra você."
+              },
+              {
+                "nome": "Preguiça",
+                "descricao": "Você leva o dobro do tempo para terminar um descanso curto e recebe o dobro de Níveis de Exaustão, por não realizar um descanso longo."
+              },
+              {
+                "nome": "Orgulho",
+                "descricao": "Você recebe -1 em Testes de Atributo de Presença."
+              }
+            ]
+          }
+        ],
+        "regraOpcional": "Alternativamente, você pode escolher receber apenas uma perícia do Benefício da Espécie “Adaptação” e não receber a Dificuldade da Espécie “Aspectos Humanos”."
+      },
+      "tracoCultural": {
+        "descricao": "Você recebe Pontos de Treinamento em um valor igual ao seu modificador de Sabedoria (mínimo de 1 ponto). Esses pontos devem ser convertidos de imediato em treinamentos, logo na criação do personagem. Posteriormente, ao aumentar o modificador de Sabedoria, você recebe mais Pontos de Treinamento, que podem ser consumidos quando você quiser. Em caso de modificador negativo, você não se beneficia dessa característica, até que aumente o seu modificador de Sabedoria para um número positivo."
+      },
+      "varianteDaEspecie": {
+        "descricao": "Além dos humanos mais comuns, existem outras tribos que possuem características únicas. Você deve pertencer a um dos seguintes tipos:",
+        "opcoes": [
+          {
+            "nome": "Humanos Comuns",
+            "beneficio": {
+              "nome": "Aptidão Natural",
+              "descricao": "Você escolhe uma perícia na qual possa usar o seu Bônus de Proficiência e dobra o seu Bônus de Proficiência."
+            }
+          },
+          {
+            "nome": "Humanozarrões",
+            "beneficio": {
+              "nome": "Colosso",
+              "descricao": "Seu tamanho aumenta para Grande e você recebe +2 em Salvaguardas de Força."
+            }
+          },
+          {
+            "nome": "Tribo Braços Longos",
+            "beneficio": {
+              "nome": "Braços Especiais",
+              "descricao": "Recebe alcance de 3 metros em jogadas de ataque (comum) corpo a corpo, quando utilizando os braços, e recebe +2 em Testes de Atributo de Destreza (Prestidigitação)."
+            }
+          },
+          {
+            "nome": "Tribo Kujas",
+            "beneficio": {
+              "nome": "Cobra Companheira",
+              "descricao": "Toda kuja recebe em seu nascimento uma cobra para acompanhá-la por toda sua vida. Você escolhe o nome da cobra e ela entende tudo que você falar, podendo realizar pequenas tarefas. Ela não recebe dano de nenhuma jogada de ataque (comum ou Técnicas) ou Salvaguarda que não a tenha explicitamente como alvo. Ela é totalmente obediente a você. Em combate, a cobra age no mesmo turno que você e usa as características da ficha “Cobra Bélica”.",
+              "companheiro": {
+                "nome": "Cobra Bélica",
+                "nivelDeDesafio": 1,
+                "experiencia": 200,
+                "classeDeResistencia": 15,
+                "bonusDeProficiencia": "+2",
+                "pontosDeVida": "39 (7d8+7)",
+                "tamanho": "1,5 metro (Pequeno)",
+                "deslocamentoMetros": 9,
+                "atributos": {
+                  "forca": 11,
+                  "destreza": 20,
+                  "constituicao": 13,
+                  "sabedoria": 10,
+                  "presenca": 10,
+                  "vontade": 10
+                },
+                "classificacao": "Tipo B, Comum.",
+                "invulnerabilidadeACondicao": "Envenenado",
+                "pericias": [
+                  "Furtividade +7"
+                ],
+                "salvaguardas": [
+                  "Destreza +7"
+                ],
+                "aspectos": [
+                  {
+                    "nome": "Agarrador",
+                    "descricao": "A cobra bélica tem vantagem nas jogadas de ataque (comum) contra qualquer criatura agarrada por ela."
+                  }
+                ],
+                "acoes": [
+                  {
+                    "nome": "Picada",
+                    "descricao": "Ataque corpo a corpo: +7 para atingir, alcance 1,5 metro, um alvo. Acerto: 10 (2d4+5) de dano de Veneno. Efeito: o alvo deve ser bem-sucedido em uma Salvaguarda de Constituição CD 16 ou recebe a condição “Envenenado” por 1 minuto, recebendo 1d4 no final de cada um de seus turnos até o fim da duração. O alvo pode repetir a Salvaguarda no final de cada um dos seus turnos, terminando o envenenamento com um sucesso, e não sofrendo mais seus efeitos durante as próximas 24 horas após o sucesso."
+                  }
+                ],
+                "usosEspeciais": [
+                  {
+                    "nome": "Arco de Cobra",
+                    "descricao": "As kujas comandam suas cobras para assumir o formato de um arco e podem usar flechas para realizar uma jogada de ataque (comum ou Técnicas) à distância com arma: pode ser adicionado o Bônus de Proficiência na jogada de ataque (comum); o modificador da jogada de ataque (comum ou Técnicas) e de dano pode ser alterado para o atributo primário da kuja; as jogadas de ataque (comum) e de dano recebem +2."
+                  },
+                  {
+                    "nome": "Restringir",
+                    "descricao": "As kujas podem comandar suas cobras para se prenderem nos membros de uma criatura Grande ou menor, tornando-se algemas tão duras quanto o aço: a criatura recebe a condição “Incapacitado” ou “Agarrado” e pode tentar encerrar as condições com uma Salvaguarda de Força CD 16, no início de cada um dos seus turnos. Para isso, a cobra deve acertar uma jogada de ataque (comum) corpo a corpo e substituir o dano por essa característica; até encerrar o agarramento, a cobra fica com a condição “Impedido”."
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "nome": "Tribo Pernas Longas",
+            "beneficio": {
+              "nome": "Pernas Especiais",
+              "descricao": "Alcance de 3 metros em jogadas de ataque (comum) corpo a corpo, quando utilizando as pernas, e seu deslocamento normal se torna 12 metros."
+            }
+          },
+          {
+            "nome": "Tribo Pescoço de Cobra",
+            "beneficio": {
+              "nome": "Pescoço Esticado",
+              "descricao": "Alcance de 3 metros em jogadas de ataque (comum) corpo a corpo, quando utilizando a cabeça, e +2 em Testes de Atributo de Vontade (Percepção) que dependam da visão."
+            }
+          },
+          {
+            "nome": "Tribo dos 3 Olhos",
+            "beneficio": {
+              "nome": "Abrir os Olhos",
+              "descricao": "Você recebe proficiência em Testes de Atributo de Vontade — escolha entre Haki, Sobrenatural ou Sorte."
+            }
+          }
+        ]
+      },
+      "ancestralidade": null,
+      "regrasEspeciais": []
+    },
+    {
+      "nome": "Lunarianos",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Medíocre",
+      "pontosDeVidaBase": 16,
+      "tamanho": {
+        "categoria": "Médio",
+        "faixa": "Normalmente, entre 1,8 e 5 metros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 90 e 600 kg."
+      },
+      "deslocamentoMetros": 9,
+      "nadoMetros": 3,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Heat",
+            "descricao": "Uma vez por rodada, usando uma ação bônus, o lunariano pode adicionar 1d10 de dano de Fogo em uma jogada de ataque (comum ou Técnicas). Pode ser usada uma quantidade de vezes igual ao seu nível de personagem, recuperando todos os usos ao término de um descanso longo. Alternativamente, pode ser usada de forma conjunta com a jogada de ataque, sem necessidade de ação bônus, até 5 vezes, respeitado o limite pelo nível de personagem. Só é possível usar o Heat uma vez por rodada, independentemente da forma usada; essa limitação também se aplica a características semelhantes, como o “Electro” dos Minks."
+          },
+          {
+            "nome": "Manipulação do Fogo",
+            "descricao": "Enquanto o fogo nas suas costas se mantém, você recebe resistência a dano de fogo; seu corpo ilumina até 6 metros com luz plena e mais 3 metros com penumbra; e você pode usar sua ação para manipular uma esfera de fogo, movendo-a para qualquer lugar a até 6 metros de você, que emite a mesma luz. Essa esfera se apaga ao encostar em criaturas, causando 1d4 de dano de Fogo, ou ao encostar em objetos, causando combustão em objetos inflamáveis."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Cabeça à Prêmio",
+            "descricao": "O Governo Mundial busca capturar ou exterminar qualquer membro da Espécie lunariana. Se você mostrar sua aparência em público, o Narrador deve jogar 1d12; em um valor 6 ou menor, em algum momento do dia seguinte, irá surgir um grupo do Governo Mundial ou Marinha para te capturar."
+          }
+        ]
+      },
+      "tracoCultural": {
+        "descricao": "Você recebe Pontos de Treinamento em um valor igual ao seu modificador de Sabedoria (mínimo de 1 ponto). Esses pontos devem ser convertidos de imediato em treinamentos, logo na criação do personagem. Posteriormente, ao aumentar o modificador de Sabedoria, você recebe mais Pontos de Treinamento, que podem ser consumidos quando você quiser. Em caso de modificador negativo, você não se beneficia dessa característica, até que aumente o seu modificador de Sabedoria para um número positivo."
+      },
+      "varianteDaEspecie": null,
+      "ancestralidade": null,
+      "regrasEspeciais": []
+    },
+    {
+      "nome": "Minks",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Medíocre",
+      "pontosDeVidaBase": 12,
+      "tamanho": {
+        "categoria": "Pequeno, Médio ou Grande",
+        "faixa": "Normalmente, entre 1,3 e 6 metros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 50 e 900 kg."
+      },
+      "deslocamentoMetros": 9,
+      "nadoMetros": 4.5,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Electro",
+            "descricao": "Uma vez por rodada, usando uma ação bônus, o mink pode adicionar 1d10 de dano Elétrico em uma jogada de ataque (comum ou Técnicas). Pode ser usada uma quantidade de vezes igual ao seu nível de personagem, recuperando todos os usos ao término de um descanso longo. Alternativamente, pode ser usada de forma conjunta com a jogada de ataque, sem necessidade de ação bônus, até 5 vezes, respeitado o limite pelo nível de personagem. Só é possível usar o Electro uma vez por rodada, independentemente da forma usada; essa limitação também se aplica a características semelhantes, como o “Heat” dos Lunarianos."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Instintos Animalescos",
+            "descricao": "Para todo mink existe algum objeto que o faz perder o controle de alguma forma. Nesses casos, o mink deve fazer uma Salvaguarda de Vontade CD 15 para não sucumbir aos seus instintos e ficar 1d4 turnos “distraído” (condição “Atordoado”), ou até que receba dano."
+          }
+        ]
+      },
+      "tracoCultural": null,
+      "varianteDaEspecie": {
+        "descricao": "Minks têm como ancestrais diversas espécies de mamíferos com pelo. Esses aspectos diferentes separam os minks em 3 tipos:",
+        "opcoes": [
+          {
+            "nome": "Ágeis",
+            "beneficio": {
+              "nome": "Corpo Leve",
+              "descricao": "Seu deslocamento normal se torna 12 metros e seu deslocamento de escalada se torna 9 metros (caso receba outro deslocamento, prevalece o maior)."
+            }
+          },
+          {
+            "nome": "Meãos",
+            "beneficio": {
+              "nome": "Estamina Animal",
+              "descricao": "Seu deslocamento normal se torna 18 metros (caso receba outro deslocamento, prevalece o maior)."
+            }
+          },
+          {
+            "nome": "Robustos",
+            "beneficio": {
+              "nome": "Pisada Firme",
+              "descricao": "Seu deslocamento normal se torna 12 metros e não pode ser reduzido por terreno difícil (caso receba outro deslocamento, prevalece o maior)."
+            }
+          }
+        ]
+      },
+      "ancestralidade": {
+        "descricao": "De acordo com o tipo de mamífero peludo que o personagem tem como ancestral, ele recebe características únicas da espécie de que se assemelha. Essas características podem ser escolhidas dentre os Traços Comuns e Traços Específicos das Akuma no Mi Zoan (ignorando o requisito de forma original, híbrida ou animal), ou criadas pelo jogador, mas devem ser aprovadas pelo Narrador. O jogador deve escolher até 2 Traços Comuns e até 1 Traço Específico, coerentes com as características do tipo de animal escolhido. Alternativamente, caso o tipo de animal escolhido seja um carnívoro caçador, o jogador pode escolher não receber nenhum Traço Comum e Específico e receber o Traço Especial “Predador” no lugar."
+      },
+      "regrasEspeciais": [
+        {
+          "nome": "Forma Sulong",
+          "descricao": "Quando um mink (e seus mestiços) olha diretamente para a lua cheia, usando uma ação bônus, seus pelos e cabelos crescem e ele se transforma imediatamente em uma fera com a pelagem branca, perdendo a consciência e sendo controlado apenas por seus instintos, com grande agressividade. O único jeito de se manter consciente nesta forma é com o treinamento “Leão da Lua”. Caso o mink esteja em um encontro evitando olhar para a lua cheia exposta, para não se transformar, recebe desvantagem em todos os Testes de Atributo e não pode usar sua concentração para outra coisa além de não olhar para a lua. Enquanto nessa forma, o mink é envolto de eletricidade por todo o corpo, seu deslocamento é dobrado e metade dele se torna deslocamento de voo, e pode usar a característica “Electro” em cada uma de suas jogadas de ataque (comum), sem necessidade de ação bônus ou limitações de uso por rodada. Após 1 minuto, o mink sofre 1 Nível de Exaustão ao final de cada um dos seus turnos seguintes, caindo inconsciente ao chegar no 6º nível. Para reverter a forma Sulong, é necessário que em 1 turno o mink gaste uma ação cobrindo os olhos com as mãos ou com algum tipo de pano, objeto, chapéu ou coisa similar."
+        }
+      ]
+    },
+    {
+      "nome": "Povo do Mar",
+      "ajusteDeAtributo": "+1 em dois atributos à escolha ou +2 em um atributo à escolha (o aumento não pode ultrapassar 20).",
+      "preconceito": "Severo",
+      "pontosDeVidaBase": 14,
+      "tamanho": {
+        "categoria": "Médio ou Grande",
+        "faixa": "Normalmente, entre 1,9 e 6 metros."
+      },
+      "peso": {
+        "faixa": "Normalmente, entre 100 e 800 kg."
+      },
+      "deslocamentoMetros": 9,
+      "nadoMetros": 15,
+      "tracosDaEspecie": {
+        "beneficios": [
+          {
+            "nome": "Força Superior",
+            "descricao": "O povo do mar se torna proficiente e adiciona mais a metade do Bônus de Proficiência (arredondado para baixo) em Salvaguardas e Testes de Atributo de Força."
+          }
+        ],
+        "dificuldades": [
+          {
+            "nome": "Criatura do Mar",
+            "descricao": "O povo do mar possui brânquias e pulmões, possibilitando respiração em ambientes com água ou ar. As brânquias se fecham em contato com o ar, fazendo com que sufoquem caso estejam submersos. Precisam de duas vezes mais água que humanos em um dia normal e quatro vezes mais em um dia quente, para não receber/aumentar 1 Nível de Exaustão ao final de cada dia."
+          }
+        ]
+      },
+      "tracoCultural": null,
+      "varianteDaEspecie": {
+        "descricao": "O povo do mar é dividido em duas variações da espécie, homens-peixe e sirenos. Você deve escolher uma delas para pertencer:",
+        "opcoes": [
+          {
+            "nome": "Homem-Peixe",
+            "beneficio": {
+              "nome": "Corpo Marinho",
+              "descricao": "De acordo com a criatura do mar que o personagem tenha como ancestral, o homem-peixe pode escolher 1 Traço Comum das Akuma no Mi Zoan (ignorando o requisito de forma original, híbrida ou animal), ou criado pelo jogador, mas deve ser aprovado pelo Narrador."
+            }
+          },
+          {
+            "nome": "Sireno",
+            "beneficio": {
+              "nome": "Natação Superior",
+              "descricao": "Os sirenos recebem 18 metros de nado e podem usar a ação “Disparada” como ação bônus, enquanto estiverem nadando."
+            }
+          }
+        ]
+      },
+      "ancestralidade": {
+        "descricao": "De acordo com o tipo de peixe ou criatura do mar que o personagem tem como ancestral, ele recebe características únicas da espécie de que se assemelha. Essas características podem ser escolhidas dentre os Traços Comuns e Traços Específicos das Akuma no Mi Zoan (ignorando o requisito de forma original, híbrida ou animal), ou criadas pelo jogador, mas devem ser aprovadas pelo Narrador. O jogador deve escolher até 2 Traços Comuns e até 1 Traço Específico, coerentes com as características do tipo de animal escolhido. Alternativamente, caso o tipo de animal escolhido seja um carnívoro caçador, o jogador pode escolher não receber nenhum Traço Comum e Específico e receber o Traço Especial “Predador” no lugar."
+      },
+      "regrasEspeciais": []
+    }
+  ],
+  "variacoesRaras": {
+    "descricao": "Além da espécie de origem, um personagem pode pertencer a um clã raro ou possuir uma condição excepcional, herdando particularidades únicas ligadas à sua linhagem ou criação. Um personagem pode possuir apenas uma dessas variações raras, independentemente da espécie. Ao escolhê-la, substitua um dos Benefícios de Espécie pela característica da variação rara selecionada.",
+    "regraDeRaridade": {
+      "nome": "O Peso da Raridade",
+      "descricao": "Por representarem condições extremamente incomuns e únicas no mundo, as Variações Raras devem ser tratadas como exceções absolutas. É altamente recomendado que não se repitam entre os jogadores, salvo aprovação explícita do Narrador e forte justificativa narrativa. O Narrador tem total autoridade para restringir, adaptar ou negar uma Variação Rara caso ela comprometa o equilíbrio da campanha ou a coerência da história."
+    },
+    "opcoes": [
+      {
+        "id": "Bucaneiro",
+        "nome": "Bucaneiro",
+        "caracteristica": {
+          "nome": "Mente Solar",
+          "descricao": "Você descende de um clã antigo envolto em mistérios e poderes desconhecidos. Sua mente é absolutamente resiliente: nenhuma Técnica, característica ou evento consegue influenciá-la, garantindo sucesso automático em qualquer teste ou efeito que tente controlar, manipular ou influenciar sua mente, de qualquer forma."
+        }
+      },
+      {
+        "id": "ExperimentoCientifico",
+        "nome": "Experimento Científico",
+        "caracteristica": {
+          "nome": "Corpo Engenhado",
+          "descricao": "Você foi submetido a experimentos ainda na infância, alterando permanentemente sua fisiologia. Seu corpo se beneficia de forma permanente da característica “Melhoria Genética” da profissão Cientista, podendo escolher entre sua opção principal ou alternativa. Entretanto, o processo foi traumático e você se torna menos empático, sempre realizando testes das perícias “Atuação”, “Intuição” e “Persuasão” com desvantagem, independentemente de outras características ou bônus."
+        }
+      },
+      {
+        "id": "FilhoDaNoite",
+        "nome": "Filho da Noite",
+        "caracteristica": {
+          "nome": "Corpo Estranho",
+          "descricao": "Você descende de um clã extremamente antigo, portador de habilidades inexplicáveis. Seu corpo desafia as leis naturais, permitindo que você consuma mais de uma Akuma no Mi sem morrer, usufruindo plenamente da capacidade de manter múltiplos tipos de poder, seguindo as regras e distribuição de elementos por fruto descritas no livro (Aspectos Inatos, Manifestações de Poder, Traços e Técnicas por grau). Como preço, você não consegue dormir e não pode realizar nem se beneficiar de descansos longos, podendo apenas meditar por 6 horas, escolhendo um único benefício limitado ao final."
+        }
+      },
+      {
+        "id": "SangueAncestral",
+        "nome": "Sangue Ancestral",
+        "caracteristica": {
+          "nome": "Poder Maligno",
+          "descricao": "Em suas veias corre sangue que descende de um grupo especial há muitas gerações, manifestado por traços físicos marcantes. Sempre que desejar, você pode causar 1 dado de dano adicional em jogadas de ataque (comum ou Técnicas). Pode ser usada uma quantidade de vezes igual ao seu nível de personagem, limitada a uma vez por rodada, recuperando os usos ao término de um descanso longo. Até alcançar o 12º nível de personagem, sempre que utilizar essa característica, você sofre dano igual ao valor do dano adicional causado, e esse dano não pode ser reduzido ou evitado de nenhuma forma."
+        }
+      },
+      {
+        "id": "Clone",
+        "nome": "Clone",
+        "caracteristica": {
+          "nome": "Habilidade Herdada",
+          "descricao": "Você é o resultado da clonagem de uma pessoa que já existiu — ou ainda existe. Em seu corpo reside uma memória genética latente, garantindo a você 3 espaços adicionais de Singularidade e podendo reduzir 1 Defeito Médio ou até 3 Defeitos Suaves, à sua escolha."
+        }
+      }
+    ]
+  }
+}

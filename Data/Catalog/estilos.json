@@ -1,0 +1,469 @@
+{
+  "estilosDeCombate": [
+    {
+      "nome": "Atirador",
+      "dadoDeVida": 8,
+      "atributoPrimario": [
+        "Destreza"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Sabedoria"
+      ],
+      "proficienciaArmas": [
+        "Armas de Fogo",
+        "Lançador de Arpão",
+        "Bazuca",
+        "Canhão",
+        "Armas de Navio"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 3 perícias quaisquer.",
+        "opcoes": null,
+        "quantidade": 3
+      },
+      "armaFavorita": {
+        "descricao": "Escolha entre pistola ou mosquete.",
+        "opcoes": [
+          "Pistola",
+          "Mosquete"
+        ],
+        "permiteCorporal": false
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Mira Treinada",
+        "Superioridade Absoluta"
+      ],
+      "equipamentoInicial": "2 pistolas ou 1 mosquete com 80 unidades de munição esférica; e 5d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Aventureiro",
+      "dadoDeVida": 10,
+      "atributoPrimario": [
+        "Destreza"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Constituição"
+      ],
+      "proficienciaArmas": [
+        "Armas Cortantes",
+        "Armas de Fogo",
+        "Armas Especiais",
+        "Armas Marciais"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 3 perícias quaisquer.",
+        "opcoes": null,
+        "quantidade": 3
+      },
+      "armaFavorita": {
+        "descricao": "Escolha entre Chicote, Pistola ou “Corporal”.",
+        "opcoes": [
+          "Chicote",
+          "Pistola"
+        ],
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Defesa Ofensiva",
+        "Perito em Técnicas"
+      ],
+      "equipamentoInicial": "1 pistola com 80 unidades de munição esférica, 1 chicote, 1 adaga; e 10d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Brutamontes",
+      "dadoDeVida": 12,
+      "atributoPrimario": [
+        "Força"
+      ],
+      "salvaguardas": [
+        "Força",
+        "Constituição"
+      ],
+      "proficienciaArmas": [
+        "Kanabo/Tacape"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Atletismo, Intimidação, Provocação e Sobrevivência.",
+        "opcoes": [
+          "Atletismo",
+          "Intimidação",
+          "Provocação",
+          "Sobrevivência"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma entre kanabo, machado grande, martelo de guerra, espada montante ou “Corporal”.",
+        "opcoes": [
+          "Kanabo",
+          "Machado Grande",
+          "Martelo de Guerra",
+          "Espada Montante"
+        ],
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Corpo de Guerreiro",
+        "Superioridade Absoluta"
+      ],
+      "equipamentoInicial": "1 kanabo; e 6d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Carateca Homem-Peixe",
+      "dadoDeVida": 12,
+      "atributoPrimario": [
+        "Força"
+      ],
+      "salvaguardas": [
+        "Constituição",
+        "Força"
+      ],
+      "proficienciaArmas": [
+        "Armas Marciais",
+        "Tridente"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Acrobacia, Atletismo, Atuação e Intimidação.",
+        "opcoes": [
+          "Acrobacia",
+          "Atletismo",
+          "Atuação",
+          "Intimidação"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha entre tridente ou “Corporal”.",
+        "opcoes": [
+          "Tridente"
+        ],
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Corpo de Guerreiro",
+        "Aprimoramento de Atributo"
+      ],
+      "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Ciborgue",
+      "dadoDeVida": 12,
+      "atributoPrimario": [
+        "Força",
+        "Sabedoria"
+      ],
+      "salvaguardas": [
+        "Força",
+        "Sabedoria"
+      ],
+      "proficienciaArmas": [],
+      "proficienciaArmasObs": "Nenhuma proficiência em armas concedida pelo estilo.",
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Atletismo, Investigação, Prestidigitação e Sobrevivência.",
+        "opcoes": [
+          "Atletismo",
+          "Investigação",
+          "Prestidigitação",
+          "Sobrevivência"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma entre bazuca, canhão, escopeta ou metralhadora.",
+        "opcoes": [
+          "Bazuca",
+          "Canhão",
+          "Escopeta",
+          "Metralhadora"
+        ],
+        "permiteCorporal": false
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Aprimoramento de Atributo",
+        "Perito em Técnicas"
+      ],
+      "equipamentoInicial": "20 unidades de combustível de máquinas; e 10d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Espadachim",
+      "dadoDeVida": 10,
+      "atributoPrimario": [
+        "Força",
+        "Destreza"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Vontade"
+      ],
+      "proficienciaArmas": [
+        "Armas Cortantes"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Atletismo, Intimidação, Intuição e Percepção.",
+        "opcoes": [
+          "Atletismo",
+          "Intimidação",
+          "Intuição",
+          "Percepção"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma arma dentre as Armas Cortantes.",
+        "opcoes": null,
+        "permiteCorporal": false
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Perito em Técnicas",
+        "Superando Limites"
+      ],
+      "equipamentoInicial": "2 sabres ou 2 katanas; e 5d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Guerrilheiro",
+      "dadoDeVida": 10,
+      "atributoPrimario": [
+        "Força",
+        "Sabedoria"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Força"
+      ],
+      "proficienciaArmas": [
+        "Armas Cortantes",
+        "Armas de Fogo",
+        "Armas Especiais",
+        "Armas Marciais"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Acrobacia, Atletismo, Furtividade, História e Sobrevivência.",
+        "opcoes": [
+          "Acrobacia",
+          "Atletismo",
+          "Furtividade",
+          "História",
+          "Sobrevivência"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma dentre todas as armas possíveis ou “Corporal”.",
+        "opcoes": null,
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Corpo de Guerreiro",
+        "Perito em Técnicas"
+      ],
+      "equipamentoInicial": "2 pistolas ou 1 mosquete com 80 unidades de munição esférica, ou 2 Armas Cortantes; e 5d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Lutador",
+      "dadoDeVida": 12,
+      "atributoPrimario": [
+        "Força"
+      ],
+      "salvaguardas": [
+        "Constituição",
+        "Força"
+      ],
+      "proficienciaArmas": [
+        "Armas Marciais"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Atletismo, Intimidação, Provocação e Sobrevivência.",
+        "opcoes": [
+          "Atletismo",
+          "Intimidação",
+          "Provocação",
+          "Sobrevivência"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma dentre as Armas Marciais ou “Corporal”.",
+        "opcoes": null,
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Corpo de Guerreiro",
+        "Superando Limites"
+      ],
+      "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Ninja",
+      "dadoDeVida": 8,
+      "atributoPrimario": [
+        "Destreza"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Sabedoria"
+      ],
+      "proficienciaArmas": [
+        "Katana",
+        "Kunai",
+        "Adaga",
+        "Shuriken",
+        "Foice",
+        "Arco"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Acrobacia, Enganação, Furtividade e Prestidigitação.",
+        "opcoes": [
+          "Acrobacia",
+          "Enganação",
+          "Furtividade",
+          "Prestidigitação"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma entre katana, kunai, adaga, shuriken, foice ou arco.",
+        "opcoes": [
+          "Katana",
+          "Kunai",
+          "Adaga",
+          "Shuriken",
+          "Foice",
+          "Arco"
+        ],
+        "permiteCorporal": false
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Defesa Ofensiva",
+        "Sortudo"
+      ],
+      "equipamentoInicial": "1 katana, 5 kunais, 30 shurikens; e 6d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Okama Kenpo",
+      "dadoDeVida": 10,
+      "atributoPrimario": [
+        "Força",
+        "Presença"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Presença"
+      ],
+      "proficienciaArmas": [
+        "Armas Marciais"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 3 entre Acrobacia, Atletismo, Atuação, Enganação, Intimidação, Intuição e Provocação.",
+        "opcoes": [
+          "Acrobacia",
+          "Atletismo",
+          "Atuação",
+          "Enganação",
+          "Intimidação",
+          "Intuição",
+          "Provocação"
+        ],
+        "quantidade": 3
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma dentre as Armas Marciais ou “Corporal”.",
+        "opcoes": null,
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Corpo de Guerreiro",
+        "Superando Limites"
+      ],
+      "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Rokushiki",
+      "dadoDeVida": 10,
+      "atributoPrimario": [
+        "Força",
+        "Destreza"
+      ],
+      "salvaguardas": [
+        "Destreza",
+        "Força"
+      ],
+      "proficienciaArmas": [
+        "Armas Marciais"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Acrobacia, Atletismo, Enganação, Furtividade, História e Investigação.",
+        "opcoes": [
+          "Acrobacia",
+          "Atletismo",
+          "Enganação",
+          "Furtividade",
+          "História",
+          "Investigação"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma entre adaga, katana, bastão ou “Corporal”.",
+        "opcoes": [
+          "Adaga",
+          "Katana",
+          "Bastão"
+        ],
+        "permiteCorporal": true
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Corpo de Guerreiro",
+        "Perito em Técnicas"
+      ],
+      "equipamentoInicial": "Um tipo de arma marcial à escolha ou 40.000 Bellys; e 15d10 x 1.000 Bellys."
+    },
+    {
+      "nome": "Samurai",
+      "dadoDeVida": 10,
+      "atributoPrimario": [
+        "Força",
+        "Destreza"
+      ],
+      "salvaguardas": [
+        "Constituição",
+        "Vontade"
+      ],
+      "proficienciaArmas": [
+        "Armas Cortantes"
+      ],
+      "proficienciaPericias": {
+        "descricao": "Escolha 2 entre Intimidação, Intuição, Percepção e Sobrevivência.",
+        "opcoes": [
+          "Intimidação",
+          "Intuição",
+          "Percepção",
+          "Sobrevivência"
+        ],
+        "quantidade": 2
+      },
+      "armaFavorita": {
+        "descricao": "Escolha uma dentre arco, daito, katana, foice, kanabo, katana, lança, nodachi, pistola e shikomizue.",
+        "opcoes": [
+          "Arco",
+          "Daito",
+          "Katana",
+          "Foice",
+          "Kanabo",
+          "Lança",
+          "Nodachi",
+          "Pistola",
+          "Shikomizue"
+        ],
+        "permiteCorporal": false
+      },
+      "habilidadeBasicaInataOpcoes": [
+        "Superioridade Absoluta",
+        "Superando Limites"
+      ],
+      "equipamentoInicial": "2 katanas; e 7d10 x 1.000 Bellys."
+    }
+  ],
+  "escopo": "Este arquivo contém apenas os dados estruturais (“ficha”) de cada Estilo de Combate: dado de vida, atributo primário, salvaguardas, proficiências, arma favorita e as opções de Habilidade Básica Inata. NÃO inclui o texto completo do pool geral de Habilidades Básicas (~25 habilidades compartilhadas) nem a progressão de características e Técnicas nível a nível de cada estilo — por escolha do usuário, para manter o arquivo enxuto."
+}

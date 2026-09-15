@@ -1,0 +1,431 @@
+@page "/criar-ficha"
+@using Domain.Enums
+@using Domain.ValueObjects.EspeciesVOs
+@using Domain.ValueObjects.EstilosDeCombateVOs
+@using Domain.ValueObjects.AntecedentesVOs
+@inject FichaCreationState CreationState
+@inject FichaAPI FichaApi
+@inject NavigationManager Navigation
+
+<PageTitle>Criar Ficha - OP RPG</PageTitle>
+
+<div class="create-ficha-container">
+    <!-- Progress Steps -->
+    <div class="progress-steps">
+        <div class="step @(CreationState.CurrentStep >= 1 ? "active" : "") @(CreationState.CurrentStep > 1 ? "completed" : "")" 
+             @onclick="@(() => GoToStep(1))">
+            <span class="step-number">1</span>
+            <span class="step-label">Básico</span>
+        </div>
+        <div class="step-line @(CreationState.CurrentStep > 1 ? "completed" : "")"></div>
+        <div class="step @(CreationState.CurrentStep >= 2 ? "active" : "") @(CreationState.CurrentStep > 2 ? "completed" : "")" 
+             @onclick="@(() => { if (CreationState.CanProceedStep1()) GoToStep(2); })">
+            <span class="step-number">2</span>
+            <span class="step-label">Classe/Origem</span>
+        </div>
+        <div class="step-line @(CreationState.CurrentStep > 2 ? "completed" : "")"></div>
+        <div class="step @(CreationState.CurrentStep >= 3 ? "active" : "")" 
+             @onclick="@(() => { if (CreationState.CanProceedStep2()) GoToStep(3); })">
+            <span class="step-number">3</span>
+            <span class="step-label">Detalhes</span>
+        </div>
+    </div>
+
+    <!-- Step 1: Basic Info -->
+    @if (CreationState.CurrentStep == 1)
+    {
+        <div class="step-content">
+            <h2>Informações Básicas</h2>
+            
+            <div class="form-group">
+                <label>Nome do Personagem</label>
+                <input type="text" 
+                       @bind="CreationState.NomePersonagem" 
+                       placeholder="Ex: Monkey D. Luffy"
+                       class="form-control" />
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nível</label>
+                    <input type="number" 
+                           @bind="CreationState.Nivel" 
+                           min="1" max="30"
+                           class="form-control" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Atributos</label>
+                <div class="attributes-grid">
+                                @foreach (var attr in CreationState.Atributos.Atributos)
+                                {
+                                    var currentAttr = attr; // capture for closure
+                                    <div class="attribute-input">
+                                        <label>@currentAttr.Nome</label>
+                                        <div class="attr-value-row">
+                                            <input type="number" 
+                                                   value="@currentAttr.ValorBase" 
+                                                   @onchange="@(e => UpdateAttribute(currentAttr.Nome, (int)e.Value))"
+                                                   min="1" max="30"
+                                                   class="form-control attr-base" />
+                                            <span class="attr-mod">Mod: @currentAttr.Modificador</span>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+            </div>
+            
+            <div class="step-navigation">
+                <button class="btn btn-primary" 
+                        @onclick="NextStep" 
+                        disabled="@(!CreationState.CanProceedStep1())">
+                    Próximo <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+    }
+
+    <!-- Step 2: Style/Species/Background -->
+    @if (CreationState.CurrentStep == 2)
+    {
+        <div class="step-content">
+            <h2>Estilo, Espécie e Antecedente</h2>
+            
+            <div class="selection-grid">
+                <!-- Estilo de Combate -->
+                <div class="selection-card @(CreationState.EstiloSelecionado != null ? "selected" : "")"
+                     @onclick="@(() => showEstiloModal = true)">
+                    <h3>⚔️ Estilo de Combate</h3>
+                    @if (CreationState.EstiloSelecionado != null)
+                    {
+                        <div class="selected-preview">
+                            <strong>@CreationState.EstiloSelecionado.Nome</strong>
+                            <span class="badge">Dado de Vida: d@CreationState.EstiloSelecionado.DadoDeVida</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="placeholder">Clique para escolher</p>
+                    }
+                </div>
+                
+                <!-- Espécie -->
+                <div class="selection-card @(CreationState.EspecieSelecionada != null ? "selected" : "")"
+                     @onclick="@(() => showEspecieModal = true)">
+                    <h3>🏴‍☠️ Espécie</h3>
+                    @if (CreationState.EspecieSelecionada != null)
+                    {
+                        <div class="selected-preview">
+                            <strong>@CreationState.EspecieSelecionada.Nome</strong>
+                            <span class="badge">PV Base: @CreationState.EspecieSelecionada.PontosDeVidaBase</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="placeholder">Clique para escolher</p>
+                    }
+                </div>
+                
+                <!-- Antecedente -->
+                <div class="selection-card @(CreationState.AntecedenteSelecionado != null ? "selected" : "")"
+                     @onclick="@(() => showAntecedenteModal = true)">
+                    <h3>📜 Antecedente</h3>
+                    @if (CreationState.AntecedenteSelecionado != null)
+                    {
+                        <div class="selected-preview">
+                            <strong>@CreationState.AntecedenteSelecionado.Nome</strong>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="placeholder">Clique para escolher</p>
+                    }
+                </div>
+            </div>
+            
+            <!-- Modals for selection -->
+            @if (showEstiloModal)
+            {
+                <div class="modal-overlay" @onclick="CloseModals">
+                    <div class="modal" @onclick:stopPropagation>
+                        <h3>Escolher Estilo de Combate</h3>
+                        <div class="modal-list">
+                            @foreach (var estilo in CreationState.EstilosDisponiveis)
+                            {
+                                <div class="modal-item @(CreationState.EstiloSelecionado?.Nome == estilo.Nome ? "selected" : "")"
+                                     @onclick="@(() => SelectEstilo(estilo))">
+                                    <strong>@estilo.Nome</strong>
+                                    <span>Dado: d@estilo.DadoDeVida | Attr: @estilo.AtributoPrimario</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            
+            @if (showEspecieModal)
+            {
+                <div class="modal-overlay" @onclick="CloseModals">
+                    <div class="modal" @onclick:stopPropagation>
+                        <h3>Escolher Espécie</h3>
+                        <div class="modal-list">
+                            @foreach (var especie in CreationState.EspeciesDisponiveis)
+                            {
+                                <div class="modal-item @(CreationState.EspecieSelecionada?.Nome == especie.Nome ? "selected" : "")"
+                                     @onclick="@(() => SelectEspecie(especie))">
+                                    <strong>@especie.Nome</strong>
+                                    <span>PV Base: @especie.PontosDeVidaBase</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            
+            @if (showAntecedenteModal)
+            {
+                <div class="modal-overlay" @onclick="CloseModals">
+                    <div class="modal" @onclick:stopPropagation>
+                        <h3>Escolher Antecedente</h3>
+                        <div class="modal-list">
+                            @foreach (var ant in CreationState.AntecedentesDisponiveis)
+                            {
+                                <div class="modal-item @(CreationState.AntecedenteSelecionado?.Nome == ant.Nome ? "selected" : "")"
+                                     @onclick="@(() => SelectAntecedente(ant))">
+                                    <strong>@ant.Nome</strong>
+                                    <span>@ant.Descricao</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            
+            <div class="step-navigation">
+                <button class="btn btn-secondary" @onclick="@(() => GoToStep(1))">
+                    <span class="arrow">←</span> Voltar
+                </button>
+                <button class="btn btn-primary" 
+                        @onclick="NextStep" 
+                        disabled="@(!CreationState.CanProceedStep2())">
+                    Próximo <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+    }
+
+    <!-- Step 3: Skills & Extras -->
+    @if (CreationState.CurrentStep == 3)
+    {
+        <div class="step-content">
+            <h2>Perícias, Haki e Equipamentos</h2>
+            
+            <div class="form-group">
+                <label>Perícias Treinadas</label>
+                <div class="skills-grid">
+                    @foreach (var pericia in Enum.GetValues<PericiasEnum>())
+                    {
+                        var isChecked = CreationState.PericiasTreinadas.Contains(pericia);
+                        <label class="skill-checkbox">
+                            <input type="checkbox" 
+                                   checked="@isChecked" 
+                                   @onchange="@(e => TogglePericia(pericia, (bool)e.Value))" />
+                            <span>@pericia</span>
+                        </label>
+                    }
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" @bind="CreationState.TemHaki" />
+                        <span>Possui Haki</span>
+                    </label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" @bind="CreationState.TemAkumaNoMi" />
+                        <span>Possui Akuma no Mi</span>
+                    </label>
+                </div>
+            </div>
+            
+            @if (CreationState.TemAkumaNoMi)
+            {
+                <div class="form-group">
+                    <label>Nome da Akuma no Mi</label>
+                    <input type="text" 
+                           @bind="CreationState.AkumaNoMiNome" 
+                           placeholder="Ex: Gomu Gomu no Mi"
+                           class="form-control" />
+                </div>
+            }
+            
+            <div class="form-group">
+                <label>Equipamentos (um por linha)</label>
+                <textarea @bind="CreationState.EquipamentosText" 
+                          rows="4" 
+                          class="form-control"
+                          placeholder="Espada&#10;Armadura leve&#10;Mochila"></textarea>
+            </div>
+            
+            <div class="step-navigation">
+                <button class="btn btn-secondary" @onclick="@(() => GoToStep(2))">
+                    <span class="arrow">←</span> Voltar
+                </button>
+                <button class="btn btn-primary btn-lg" @onclick="CreateFicha">
+                    <span class="btn-icon">✨</span>
+                    Criar Ficha
+                </button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private bool showEstiloModal = false;
+    private bool showEspecieModal = false;
+    private bool showAntecedenteModal = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadCatalogData();
+    }
+
+    private async Task LoadCatalogData()
+    {
+        try
+        {
+            CreationState.EstilosDisponiveis = await FichaApi.GetEstilosAsync() ?? new();
+            CreationState.EspeciesDisponiveis = await FichaApi.GetEspeciesAsync() ?? new();
+            CreationState.AntecedentesDisponiveis = await FichaApi.GetAntecedentesAsync() ?? new();
+        }
+        catch (Exception)
+        {
+            // Fallback para dados mock se API não estiver disponível
+            LoadMockData();
+        }
+    }
+
+    private void LoadMockData()
+    {
+        // Estilos mock
+        CreationState.EstilosDisponiveis = new()
+        {
+            new EstilosDeCombateEstilosVO { Nome = "Espadachim", DadoDeVida = 10, AtributoPrimario = new() { AtributoPrimario = new() { AtributosEnum.DESTREZA } } },
+            new EstilosDeCombateEstilosVO { Nome = "Atirador", DadoDeVida = 8, AtributoPrimario = new() { AtributoPrimario = new() { AtributosEnum.DESTREZA } } },
+            new EstilosDeCombateEstilosVO { Nome = "Lutador", DadoDeVida = 12, AtributoPrimario = new() { AtributoPrimario = new() { AtributosEnum.FORCA } } },
+            new EstilosDeCombateEstilosVO { Nome = "Ninja", DadoDeVida = 8, AtributoPrimario = new() { AtributoPrimario = new() { AtributosEnum.DESTREZA } } },
+            new EstilosDeCombateEstilosVO { Nome = "Rokushiki", DadoDeVida = 10, AtributoPrimario = new() { AtributoPrimario = new() { AtributosEnum.FORCA } } },
+            new EstilosDeCombateEstilosVO { Nome = "Okama", DadoDeVida = 10, AtributoPrimario = new() { AtributoPrimario = new() { AtributosEnum.PRESENCA } } },
+        };
+
+        // Espécies mock
+        CreationState.EspeciesDisponiveis = new()
+        {
+            new EspeciesVO { Nome = "Humano", PontosDeVidaBase = 0 },
+            new EspeciesVO { Nome = "Tritão", PontosDeVidaBase = 2 },
+            new EspeciesVO { Nome = "Mink", PontosDeVidaBase = 1 },
+            new EspeciesVO { Nome = "Ciborgue", PontosDeVidaBase = 3 },
+        };
+
+        // Antecedentes mock
+        CreationState.AntecedentesDisponiveis = new()
+        {
+            new AntecedentesVO { Nome = "Pirata", Descricao = "Vida no mar, liberdade acima de tudo" },
+            new AntecedentesVO { Nome = "Marinheiro", Descricao = "Justiça e ordem nos mares" },
+            new AntecedentesVO { Nome = "Civil", Descricao = "Vida comum nas ilhas" },
+            new AntecedentesVO { Nome = "Revolucionário", Descricao = "Lutando contra o governo mundial" },
+        };
+    }
+
+    private void GoToStep(int step)
+    {
+        if (step > CreationState.CurrentStep && !CanProceedToStep(step))
+            return;
+        
+        CreationState.CurrentStep = step;
+    }
+
+    private bool CanProceedToStep(int step)
+    {
+        return step switch
+        {
+            2 => CreationState.CanProceedStep1(),
+            3 => CreationState.CanProceedStep2(),
+            _ => true
+        };
+    }
+
+    private void NextStep()
+    {
+        if (CreationState.CurrentStep == 1 && CreationState.CanProceedStep1())
+            CreationState.CurrentStep = 2;
+        else if (CreationState.CurrentStep == 2 && CreationState.CanProceedStep2())
+            CreationState.CurrentStep = 3;
+    }
+
+    private void SelectEstilo(EstilosDeCombateEstilosVO estilo)
+    {
+        CreationState.EstiloSelecionado = estilo;
+        showEstiloModal = false;
+    }
+
+    private void SelectEspecie(EspeciesVO especie)
+    {
+        CreationState.EspecieSelecionada = especie;
+        showEspecieModal = false;
+    }
+
+    private void SelectAntecedente(AntecedentesVO antecedente)
+    {
+        CreationState.AntecedenteSelecionado = antecedente;
+        showAntecedenteModal = false;
+    }
+
+    private void CloseModals()
+    {
+        showEstiloModal = false;
+        showEspecieModal = false;
+        showAntecedenteModal = false;
+    }
+
+    private void TogglePericia(PericiasEnum pericia, bool checked_)
+    {
+        if (checked_)
+            CreationState.PericiasTreinadas.Add(pericia);
+        else
+            CreationState.PericiasTreinadas.Remove(pericia);
+    }
+
+    private void UpdateAttribute(AtributosEnum nomeAtributo, int novoValor)
+    {
+        var attr = CreationState.Atributos.Atributos.Find(a => a.Nome == nomeAtributo);
+        if (attr != null)
+        {
+            // Criar novo AtributoVO com o valor atualizado (record é imutável)
+            var novoAtributo = new Domain.ValueObjects.AtributosVOs.AtributoVO(nomeAtributo, novoValor);
+            CreationState.Atributos = CreationState.Atributos.AlterarAtributoUnico(novoAtributo);
+        }
+    }
+
+    private async Task CreateFicha()
+    {
+        CreationState.IsCompleted = true;
+        
+        // Parse equipamentos
+        if (!string.IsNullOrWhiteSpace(CreationState.EquipamentosText))
+        {
+            CreationState.Equipamentos = CreationState.EquipamentosText
+                .Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .ToList();
+        }
+
+        // TODO: Chamar API para criar ficha
+        // await FichaApi.CriarFichaAsync(...)
+        
+        Navigation.NavigateTo("/ficha/sucesso");
+    }
+}

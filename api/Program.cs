@@ -15,14 +15,14 @@ string caminhoArquivoAntecedentes = builder.Configuration["CaminhoArquivos:Antec
 string caminhoArquivoEspecies = builder.Configuration["CaminhoArquivos:Especies"];
 
 //Container De Dependency Injection
-builder.Services.AddScoped<IAntecedentesRepository>(provider =>
+builder.Services.AddScoped<IAntecedentesCatalog>(provider =>
 {
-    return new AntecedentesRepository(caminhoArquivoAntecedentes);
+    return new JsonAntecedentesCatalog(caminhoArquivoAntecedentes);
 });
 
-builder.Services.AddScoped<IEspeciesRepository>(provider =>
+builder.Services.AddScoped<IEspeciesCatalog>(provider =>
 {
-    return new EspeciesRepository(caminhoArquivoEspecies);
+    return new JsonEspeciesCatalog(caminhoArquivoEspecies);
 });
 
 

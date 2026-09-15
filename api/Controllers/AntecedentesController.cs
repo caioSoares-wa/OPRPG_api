@@ -7,9 +7,9 @@ namespace api.Controllers
     [Route("api/[controller]")]
     public class AntecedentesController : ControllerBase
     {
-        private readonly IAntecedentesRepository _antecedentesRepository;
+        private readonly IAntecedentesCatalog _antecedentesRepository;
 
-        public AntecedentesController( IAntecedentesRepository antecedentesRepository) {
+        public AntecedentesController( IAntecedentesCatalog antecedentesRepository) {
             _antecedentesRepository = antecedentesRepository;
         }
 

@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Services.DTOs.EspeciesDTOs
+{
+    public record VarianteOpcoes
+    {
+        public string Nome { get; init; } = string.Empty;
+        public VarianteBeneficios Beneficio { get; init; } 
+    }
+}

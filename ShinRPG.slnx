@@ -1,8 +1,6 @@
 <Solution>
   <Project Path="api/api.csproj" />
-  <Project Path="Application/Application.csproj" />
-  <Project Path="BlazorFront/BlazorFront.csproj" Id="71d6747b-c91d-4f6a-9e0b-f1bb703c98a6" />
-  <Project Path="Domain/Domain.csproj" />
-  <Project Path="Infra/Infra.csproj" Id="fbe5af81-bd04-4fbd-b225-b243b14bc7c4" />
-  <Project Path="Shared/Shared.csproj" />
+  <Project Path="Data/Data.csproj" Id="cd8dc977-e7b4-4bf6-aa4e-201cfe476318" />
+  <Project Path="Models/Models.csproj" Id="7bfebb98-2f3b-4d53-8ffc-ef17a186c0d7" />
+  <Project Path="Services/Services.csproj" Id="08b92965-f8ea-4648-9c42-e3feadd28c7a" />
 </Solution>
